@@ -1,0 +1,512 @@
+{"time":"2026-04-17T16:39:08","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-17T16:39:08","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.21"}
+{"time":"2026-04-17T16:39:20","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-17T16:39:20","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-17T16:39:20","level":"ERROR","module":"main","message":"Model file not found — actor=actor2 task=cancellation error=Actor2 model file not found: actor2_mobilites\outputs\xgboost_cancellation.pkl. Run actor2_mobilites/main.py to train models."}
+{"time":"2026-04-17T16:39:20","level":"INFO","module":"main","message":"Completed: POST /predict status=503 latency_ms=2.47"}
+{"time":"2026-04-17T16:39:34","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-17T16:39:34","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes']"}
+{"time":"2026-04-17T16:39:34","level":"ERROR","module":"main","message":"Model file not found — actor=actor2 task=cancellation error=Actor2 model file not found: actor2_mobilites\outputs\xgboost_cancellation.pkl. Run actor2_mobilites/main.py to train models."}
+{"time":"2026-04-17T16:39:34","level":"INFO","module":"main","message":"Completed: POST /predict status=503 latency_ms=2.21"}
+{"time":"2026-04-17T16:42:40","level":"INFO","module":"main","message":"Incoming: GET /docs client=127.0.0.1"}
+{"time":"2026-04-17T16:42:40","level":"INFO","module":"main","message":"Completed: GET /docs status=200 latency_ms=0.47"}
+{"time":"2026-04-17T16:42:42","level":"INFO","module":"main","message":"Incoming: GET /openapi.json client=127.0.0.1"}
+{"time":"2026-04-17T16:42:42","level":"INFO","module":"main","message":"Completed: GET /openapi.json status=200 latency_ms=23.74"}
+{"time":"2026-04-17T16:50:57","level":"INFO","module":"main","message":"Incoming: GET /predictions client=127.0.0.1"}
+{"time":"2026-04-17T16:50:57","level":"INFO","module":"main","message":"Completed: GET /predictions status=200 latency_ms=2.72"}
+{"time":"2026-04-17T19:35:54","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-17T19:35:54","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.74"}
+{"time":"2026-04-17T19:40:20","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-17T19:40:20","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.7"}
+{"time":"2026-04-17T19:40:20","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-17T19:45:28","level":"INFO","module":"main","message":"Retrain actor1: exit=1"}
+{"time":"2026-04-17T19:47:04","level":"INFO","module":"main","message":"Retrain actor2: exit=1"}
+{"time":"2026-04-17T19:48:01","level":"INFO","module":"main","message":"Retrain actor3: exit=1"}
+{"time":"2026-04-17T19:48:01","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=461792.32"}
+{"time":"2026-04-17T20:02:20","level":"INFO","module":"main","message":"Incoming: GET /docs client=127.0.0.1"}
+{"time":"2026-04-17T20:02:20","level":"INFO","module":"main","message":"Completed: GET /docs status=200 latency_ms=2.67"}
+{"time":"2026-04-17T20:02:21","level":"INFO","module":"main","message":"Incoming: GET /openapi.json client=127.0.0.1"}
+{"time":"2026-04-17T20:02:21","level":"INFO","module":"main","message":"Completed: GET /openapi.json status=200 latency_ms=27.01"}
+{"time":"2026-04-17T20:02:38","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-17T20:02:38","level":"INFO","module":"main","message":"n8n save — actor=string task=string total_stored=1"}
+{"time":"2026-04-17T20:02:38","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=9.85"}
+{"time":"2026-04-17T20:02:46","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-17T20:02:46","level":"INFO","module":"main","message":"Completed: POST /predict status=422 latency_ms=7.92"}
+{"time":"2026-04-17T20:02:52","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-17T20:06:05","level":"INFO","module":"main","message":"Retrain actor1: exit=1"}
+{"time":"2026-04-17T20:06:57","level":"INFO","module":"main","message":"Retrain actor2: exit=1"}
+{"time":"2026-04-17T20:07:28","level":"INFO","module":"main","message":"Retrain actor3: exit=1"}
+{"time":"2026-04-17T20:07:28","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=276124.35"}
+{"time":"2026-04-17T20:08:11","level":"INFO","module":"main","message":"Incoming: GET /docs client=127.0.0.1"}
+{"time":"2026-04-17T20:08:11","level":"INFO","module":"main","message":"Completed: GET /docs status=200 latency_ms=2.65"}
+{"time":"2026-04-17T20:08:13","level":"INFO","module":"main","message":"Incoming: GET /openapi.json client=127.0.0.1"}
+{"time":"2026-04-17T20:08:13","level":"INFO","module":"main","message":"Completed: GET /openapi.json status=200 latency_ms=14.0"}
+{"time":"2026-04-17T20:19:53","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-17T20:19:53","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.97"}
+{"time":"2026-04-17T20:19:53","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-17T20:23:41","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-17T20:24:43","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-17T20:25:16","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-17T20:25:16","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=323282.17"}
+{"time":"2026-04-17T20:25:16","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-17T20:25:16","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=2.03"}
+{"time":"2026-04-17T20:56:57","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-17T20:56:57","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-17T20:56:57","level":"INFO","module":"actor2","message":"Actor2: loading xgboost_cancellation.pkl"}
+{"time":"2026-04-17T20:56:59","level":"INFO","module":"actor2","message":"Actor2: loading xgboost_cancellation_features.pkl"}
+{"time":"2026-04-17T20:56:59","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-17T20:56:59","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-17T20:56:59","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=2131.412 total_stored=2"}
+{"time":"2026-04-17T20:56:59","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=2134.48"}
+{"time":"2026-04-17T20:56:59","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-17T20:56:59","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=3"}
+{"time":"2026-04-17T20:56:59","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=14.25"}
+{"time":"2026-04-17T21:03:57","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-17T21:03:57","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-17T21:03:57","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-17T21:03:57","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-17T21:03:57","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=3.236 total_stored=4"}
+{"time":"2026-04-17T21:03:57","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=18.28"}
+{"time":"2026-04-17T21:03:57","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-17T21:03:57","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=5"}
+{"time":"2026-04-17T21:03:57","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=11.54"}
+{"time":"2026-04-17T22:10:30","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-17T22:10:30","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-17T22:10:30","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-17T22:10:30","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-17T22:10:30","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=23.983 total_stored=6"}
+{"time":"2026-04-17T22:10:30","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=54.94"}
+{"time":"2026-04-17T22:10:30","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-17T22:10:30","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=7"}
+{"time":"2026-04-17T22:10:30","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=13.85"}
+{"time":"2026-04-18T20:34:22","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-18T20:34:22","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.53"}
+{"time":"2026-04-18T20:36:54","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-18T20:36:54","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.25"}
+{"time":"2026-04-18T20:37:22","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-18T20:37:22","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.39"}
+{"time":"2026-04-18T20:37:22","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-18T20:37:35","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-18T20:37:35","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-18T20:37:35","level":"INFO","module":"actor2","message":"Actor2: loading xgboost_cancellation.pkl"}
+{"time":"2026-04-18T20:37:45","level":"INFO","module":"actor2","message":"Actor2: loading xgboost_cancellation_features.pkl"}
+{"time":"2026-04-18T20:37:45","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-18T20:37:45","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-18T20:37:45","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=9307.683 total_stored=8"}
+{"time":"2026-04-18T20:37:45","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=9319.06"}
+{"time":"2026-04-18T20:37:45","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-18T20:37:45","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=9"}
+{"time":"2026-04-18T20:37:45","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=12.35"}
+{"time":"2026-04-18T20:39:07","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-18T20:39:30","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-18T20:39:49","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-18T20:39:49","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=147192.34"}
+{"time":"2026-04-18T20:48:33","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-18T20:48:33","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=18.83"}
+{"time":"2026-04-18T20:48:33","level":"INFO","module":"main","message":"Incoming: GET /favicon.ico client=127.0.0.1"}
+{"time":"2026-04-18T20:48:33","level":"INFO","module":"main","message":"Completed: GET /favicon.ico status=404 latency_ms=0.65"}
+{"time":"2026-04-18T20:54:46","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-18T20:54:46","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-18T20:54:46","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-18T20:54:46","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-18T20:54:46","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=1.908 total_stored=10"}
+{"time":"2026-04-18T20:54:46","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=4.96"}
+{"time":"2026-04-18T20:54:46","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-18T20:54:47","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=11"}
+{"time":"2026-04-18T20:54:47","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=17.41"}
+{"time":"2026-04-18T21:49:39","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-18T21:49:39","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-18T21:49:39","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-18T21:49:39","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-18T21:49:39","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=5.918 total_stored=12"}
+{"time":"2026-04-18T21:49:39","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=41.32"}
+{"time":"2026-04-18T21:50:47","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-18T21:50:47","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-18T21:50:47","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-18T21:50:47","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-18T21:50:47","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=1.547 total_stored=13"}
+{"time":"2026-04-18T21:50:47","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=23.06"}
+{"time":"2026-04-19T21:02:41","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-19T21:02:41","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=8.19"}
+{"time":"2026-04-19T21:02:50","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-19T21:02:50","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.07"}
+{"time":"2026-04-19T21:19:16","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T21:19:16","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T21:19:16","level":"INFO","module":"actor2","message":"Actor2: loading xgboost_cancellation.pkl"}
+{"time":"2026-04-19T21:19:44","level":"INFO","module":"actor2","message":"Actor2: loading xgboost_cancellation_features.pkl"}
+{"time":"2026-04-19T21:19:44","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T21:19:44","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T21:19:44","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=28245.489 total_stored=14"}
+{"time":"2026-04-19T21:19:44","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=28250.27"}
+{"time":"2026-04-19T21:19:44","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T21:19:45","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=15"}
+{"time":"2026-04-19T21:19:45","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=58.79"}
+{"time":"2026-04-19T21:25:03","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T21:25:03","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T21:25:03","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T21:25:03","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T21:25:03","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=5.627 total_stored=16"}
+{"time":"2026-04-19T21:25:03","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=46.34"}
+{"time":"2026-04-19T21:25:03","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T21:25:03","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=17"}
+{"time":"2026-04-19T21:25:03","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=15.44"}
+{"time":"2026-04-19T21:31:19","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T21:31:19","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T21:31:19","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T21:31:19","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T21:31:19","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=6.825 total_stored=18"}
+{"time":"2026-04-19T21:31:19","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=62.56"}
+{"time":"2026-04-19T21:31:19","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T21:31:19","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=19"}
+{"time":"2026-04-19T21:31:19","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=15.52"}
+{"time":"2026-04-19T21:34:56","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T21:34:56","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T21:34:56","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T21:34:56","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T21:34:56","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=2.348 total_stored=20"}
+{"time":"2026-04-19T21:34:56","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=43.42"}
+{"time":"2026-04-19T21:34:56","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T21:34:56","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=21"}
+{"time":"2026-04-19T21:34:56","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=12.84"}
+{"time":"2026-04-19T21:37:18","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T21:37:18","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T21:37:18","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T21:37:18","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T21:37:18","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=1.912 total_stored=22"}
+{"time":"2026-04-19T21:37:18","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=32.28"}
+{"time":"2026-04-19T21:37:18","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T21:37:18","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=23"}
+{"time":"2026-04-19T21:37:18","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=24.27"}
+{"time":"2026-04-19T21:38:26","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T21:38:26","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T21:38:26","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T21:38:26","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T21:38:26","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=3.47 total_stored=24"}
+{"time":"2026-04-19T21:38:26","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=27.41"}
+{"time":"2026-04-19T21:38:26","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T21:38:27","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=25"}
+{"time":"2026-04-19T21:38:27","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=27.48"}
+{"time":"2026-04-19T21:39:26","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T21:39:26","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T21:39:26","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T21:39:26","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T21:39:26","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=4.056 total_stored=26"}
+{"time":"2026-04-19T21:39:26","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=25.37"}
+{"time":"2026-04-19T21:39:26","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T21:39:26","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=27"}
+{"time":"2026-04-19T21:39:26","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=17.44"}
+{"time":"2026-04-19T21:41:12","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T21:41:12","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T21:41:12","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T21:41:12","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T21:41:13","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=4.771 total_stored=28"}
+{"time":"2026-04-19T21:41:13","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=179.75"}
+{"time":"2026-04-19T21:41:13","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T21:41:13","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=29"}
+{"time":"2026-04-19T21:41:13","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=38.08"}
+{"time":"2026-04-19T21:43:07","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T21:43:07","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T21:43:07","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T21:43:07","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T21:43:07","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=5.402 total_stored=30"}
+{"time":"2026-04-19T21:43:07","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=26.07"}
+{"time":"2026-04-19T21:43:08","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T21:43:08","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=31"}
+{"time":"2026-04-19T21:43:08","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=21.72"}
+{"time":"2026-04-19T22:06:39","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T22:06:39","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T22:06:39","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T22:06:39","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T22:06:39","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=33.769 total_stored=32"}
+{"time":"2026-04-19T22:06:39","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=71.82"}
+{"time":"2026-04-19T22:06:39","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T22:06:39","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=33"}
+{"time":"2026-04-19T22:06:39","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=20.3"}
+{"time":"2026-04-19T22:08:56","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T22:08:56","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T22:08:56","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T22:08:56","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T22:08:57","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=7.25 total_stored=34"}
+{"time":"2026-04-19T22:08:57","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=93.2"}
+{"time":"2026-04-19T22:08:57","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T22:08:57","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=35"}
+{"time":"2026-04-19T22:08:57","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=16.98"}
+{"time":"2026-04-19T22:10:22","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T22:10:22","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T22:10:22","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T22:10:22","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T22:10:22","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=6.074 total_stored=36"}
+{"time":"2026-04-19T22:10:22","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=35.23"}
+{"time":"2026-04-19T22:10:22","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T22:10:22","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=37"}
+{"time":"2026-04-19T22:10:22","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=15.86"}
+{"time":"2026-04-19T22:15:28","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T22:15:28","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T22:15:28","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T22:15:28","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T22:15:28","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=3.213 total_stored=38"}
+{"time":"2026-04-19T22:15:28","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=24.26"}
+{"time":"2026-04-19T22:15:28","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T22:15:28","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=39"}
+{"time":"2026-04-19T22:15:28","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=17.99"}
+{"time":"2026-04-19T22:16:49","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-19T22:16:49","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=cancellation features_keys=['heure', 'delay_minutes', 'temperature']"}
+{"time":"2026-04-19T22:16:49","level":"WARNING","module":"actor2","message":"Actor2 cancellation: missing features ['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'charge_estimee'] — defaulting to 0"}
+{"time":"2026-04-19T22:16:49","level":"INFO","module":"actor2","message":"Actor2 cancellation: prob=0.0021 pred=0 risk=LOW"}
+{"time":"2026-04-19T22:16:49","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=cancellation latency_ms=4.346 total_stored=40"}
+{"time":"2026-04-19T22:16:49","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=35.29"}
+{"time":"2026-04-19T22:16:49","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-19T22:16:49","level":"INFO","module":"main","message":"n8n save — actor=actor2 task=cancellation total_stored=41"}
+{"time":"2026-04-19T22:16:49","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=22.54"}
+{"time":"2026-04-19T22:20:30","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-19T22:20:30","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=15.54"}
+{"time":"2026-04-19T22:20:30","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-19T22:22:07","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-19T22:22:33","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-19T22:22:56","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-19T22:22:56","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=145811.98"}
+{"time":"2026-04-19T22:22:56","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-19T22:22:56","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.76"}
+{"time":"2026-04-20T08:04:19","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-20T08:05:03","level":"INFO","module":"main","message":"Predict request — actor=actor1 task=co2 features_keys=['nb_voyageurs', 'distance_km', 'type_transport', 'heure', 'jour_semaine']"}
+{"time":"2026-04-20T08:05:03","level":"INFO","module":"actor1","message":"Actor1: loading xgboost_co2.pkl"}
+{"time":"2026-04-20T08:06:51","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-20T08:06:51","level":"INFO","module":"main","message":"Predict request — actor=actor1 task=co2 features_keys=['nb_voyageurs', 'distance_km', 'type_transport', 'heure', 'jour_semaine']"}
+{"time":"2026-04-20T08:06:51","level":"INFO","module":"actor1","message":"Actor1: loading xgboost_co2.pkl"}
+{"time":"2026-04-20T08:07:04","level":"INFO","module":"actor1","message":"Actor1: loading xgboost_features.pkl"}
+{"time":"2026-04-20T08:07:04","level":"WARNING","module":"actor1","message":"Actor1 co2: missing features ['zone_encoded', 'mode_encoded', 'mode_co2_mean', 'annee', 'mois_sin', 'mois_cos', 'pm25', 'no2', 'aqi_index', 'co2_lag1', 'co2_lag3', 'energie_lag1', 'energie_lag3', 'aqi_lag1', 'pm25_lag1', 'co2_roll3', 'energie_roll3', 'pm25_roll3'] — defaulting to 0"}
+{"time":"2026-04-20T08:07:04","level":"INFO","module":"actor1","message":"Actor1 co2: result=3.0620"}
+{"time":"2026-04-20T08:07:04","level":"INFO","module":"main","message":"Prediction success — actor=actor1 task=co2 latency_ms=13166.653 total_stored=42"}
+{"time":"2026-04-20T08:07:04","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=13180.81"}
+{"time":"2026-04-20T08:07:04","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-20T08:07:04","level":"INFO","module":"main","message":"n8n save — actor=actor1 task=co2 total_stored=43"}
+{"time":"2026-04-20T08:07:04","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=13.85"}
+{"time":"2026-04-20T09:06:10","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-20T09:06:10","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=8.88"}
+{"time":"2026-04-20T09:06:10","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-20T09:07:38","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-20T09:07:57","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-20T09:08:17","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-20T09:08:17","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=127758.1"}
+{"time":"2026-04-20T09:08:17","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-20T09:08:17","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.41"}
+{"time":"2026-04-20T09:08:33","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-20T09:08:33","level":"INFO","module":"main","message":"Predict request — actor=actor1 task=co2 features_keys=['nb_voyageurs', 'distance_km', 'type_transport', 'heure', 'jour_semaine']"}
+{"time":"2026-04-20T09:08:33","level":"WARNING","module":"actor1","message":"Actor1 co2: missing features ['zone_encoded', 'mode_encoded', 'mode_co2_mean', 'annee', 'mois_sin', 'mois_cos', 'pm25', 'no2', 'aqi_index', 'co2_lag1', 'co2_lag3', 'energie_lag1', 'energie_lag3', 'aqi_lag1', 'pm25_lag1', 'co2_roll3', 'energie_roll3', 'pm25_roll3'] — defaulting to 0"}
+{"time":"2026-04-20T09:08:33","level":"INFO","module":"actor1","message":"Actor1 co2: result=3.0620"}
+{"time":"2026-04-20T09:08:33","level":"INFO","module":"main","message":"Prediction success — actor=actor1 task=co2 latency_ms=35.683 total_stored=44"}
+{"time":"2026-04-20T09:08:33","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=60.96"}
+{"time":"2026-04-20T09:08:33","level":"INFO","module":"main","message":"Incoming: POST /save-n8n-result client=127.0.0.1"}
+{"time":"2026-04-20T09:08:33","level":"INFO","module":"main","message":"n8n save — actor=actor1 task=co2 total_stored=45"}
+{"time":"2026-04-20T09:08:33","level":"INFO","module":"main","message":"Completed: POST /save-n8n-result status=200 latency_ms=21.15"}
+{"time":"2026-04-23T22:15:17","level":"INFO","module":"main","message":"Incoming: GET /health client=172.20.0.1"}
+{"time":"2026-04-23T22:15:17","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=21.49"}
+{"time":"2026-04-23T22:17:41","level":"INFO","module":"main","message":"Incoming: GET /health client=172.20.0.1"}
+{"time":"2026-04-23T22:17:42","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=8.59"}
+{"time":"2026-04-23T22:20:19","level":"INFO","module":"main","message":"Incoming: POST /predict client=172.20.0.1"}
+{"time":"2026-04-23T22:20:19","level":"INFO","module":"main","message":"Predict request — actor=actor1 task=co2 features_keys=['zone_encoded', 'mode_encoded', 'mode_co2_mean', 'annee', 'mois_sin', 'mois_cos', 'pm25', 'no2', 'aqi_index', 'co2_lag1', 'co2_lag3', 'energie_lag1', 'energie_lag3', 'aqi_lag1', 'pm25_lag1', 'co2_roll3', 'energie_roll3', 'pm25_roll3']"}
+{"time":"2026-04-23T22:20:19","level":"INFO","module":"actor1","message":"Actor1: loading xgboost_co2.pkl"}
+{"time":"2026-04-23T22:20:22","level":"INFO","module":"actor1","message":"Actor1: loading xgboost_features.pkl"}
+{"time":"2026-04-23T22:20:22","level":"INFO","module":"actor1","message":"Actor1 co2: result=2.2667"}
+{"time":"2026-04-23T22:20:22","level":"INFO","module":"main","message":"Prediction success — actor=actor1 task=co2 latency_ms=3157.866 total_stored=46"}
+{"time":"2026-04-23T22:20:22","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=3190.59"}
+{"time":"2026-04-24T09:10:30","level":"INFO","module":"main","message":"Incoming: OPTIONS /predict client=127.0.0.1"}
+{"time":"2026-04-24T09:10:30","level":"INFO","module":"main","message":"Completed: OPTIONS /predict status=200 latency_ms=3.3"}
+{"time":"2026-04-24T09:10:30","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-24T09:10:30","level":"INFO","module":"main","message":"Predict request — actor=actor1 task=co2 features_keys=['zone_encoded', 'mode_encoded', 'mode_co2_mean', 'annee', 'mois_sin', 'mois_cos', 'pm25', 'no2', 'aqi_index', 'co2_lag1', 'co2_lag3', 'energie_lag1', 'energie_lag3', 'aqi_lag1', 'pm25_lag1', 'co2_roll3', 'energie_roll3', 'pm25_roll3']"}
+{"time":"2026-04-24T09:10:30","level":"INFO","module":"actor1","message":"Actor1: loading xgboost_co2.pkl"}
+{"time":"2026-04-24T09:11:02","level":"INFO","module":"actor1","message":"Actor1: loading xgboost_features.pkl"}
+{"time":"2026-04-24T09:11:02","level":"INFO","module":"actor1","message":"Actor1 co2: result=2.2667"}
+{"time":"2026-04-24T09:11:02","level":"INFO","module":"main","message":"Prediction success — actor=actor1 task=co2 latency_ms=32436.462 total_stored=47"}
+{"time":"2026-04-24T09:11:02","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=32463.97"}
+{"time":"2026-04-24T09:11:45","level":"INFO","module":"main","message":"Incoming: OPTIONS /predict client=127.0.0.1"}
+{"time":"2026-04-24T09:11:45","level":"INFO","module":"main","message":"Completed: OPTIONS /predict status=200 latency_ms=1.59"}
+{"time":"2026-04-24T09:11:45","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-24T09:11:45","level":"INFO","module":"main","message":"Predict request — actor=actor2 task=charge features_keys=['zone_encoded', 'line_encoded', 'mode_encoded', 'hour', 'rush_hour', 'is_weekend', 'congestion_index', 'vitesse_kmh', 'temps_trajet_min']"}
+{"time":"2026-04-24T09:11:45","level":"INFO","module":"actor2","message":"Actor2: loading xgboost_charge.pkl"}
+{"time":"2026-04-24T09:11:45","level":"INFO","module":"actor2","message":"Actor2: loading xgboost_charge_features.pkl"}
+{"time":"2026-04-24T09:11:45","level":"INFO","module":"actor2","message":"Actor2 charge: result=42.8242"}
+{"time":"2026-04-24T09:11:45","level":"INFO","module":"main","message":"Prediction success — actor=actor2 task=charge latency_ms=52.844 total_stored=48"}
+{"time":"2026-04-24T09:11:45","level":"INFO","module":"main","message":"Completed: POST /predict status=200 latency_ms=99.97"}
+{"time":"2026-04-24T09:11:47","level":"INFO","module":"main","message":"Incoming: OPTIONS /predict client=127.0.0.1"}
+{"time":"2026-04-24T09:11:47","level":"INFO","module":"main","message":"Completed: OPTIONS /predict status=200 latency_ms=1.39"}
+{"time":"2026-04-24T09:11:47","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-24T09:11:47","level":"INFO","module":"main","message":"Predict request — actor=actor3 task=severity features_keys=['zone_sk', 'mois', 'nb_accidents', 'nb_graves', 'volume_crimes', 'taux_criminalite', 'usagers_vulnerables']"}
+{"time":"2026-04-24T09:11:47","level":"INFO","module":"actor3","message":"Actor3: loading rf_severity.pkl"}
+{"time":"2026-04-24T09:11:49","level":"ERROR","module":"main","message":"Unexpected error — actor=actor3 task=severity error_type=UnpicklingError error=invalid load key, '\x0f'."}
+{"time":"2026-04-24T09:11:49","level":"INFO","module":"main","message":"Completed: POST /predict status=500 latency_ms=2314.5"}
+{"time":"2026-04-24T09:11:52","level":"INFO","module":"main","message":"Incoming: OPTIONS /predict client=127.0.0.1"}
+{"time":"2026-04-24T09:11:52","level":"INFO","module":"main","message":"Completed: OPTIONS /predict status=200 latency_ms=0.75"}
+{"time":"2026-04-24T09:11:52","level":"INFO","module":"main","message":"Incoming: POST /predict client=127.0.0.1"}
+{"time":"2026-04-24T09:11:52","level":"INFO","module":"main","message":"Predict request — actor=actor3 task=severity features_keys=['zone_sk', 'mois', 'nb_accidents', 'nb_graves', 'volume_crimes', 'taux_criminalite', 'usagers_vulnerables']"}
+{"time":"2026-04-24T09:11:52","level":"INFO","module":"actor3","message":"Actor3: loading rf_severity.pkl"}
+{"time":"2026-04-24T09:11:52","level":"ERROR","module":"main","message":"Unexpected error — actor=actor3 task=severity error_type=UnpicklingError error=invalid load key, '\x0f'."}
+{"time":"2026-04-24T09:11:52","level":"INFO","module":"main","message":"Completed: POST /predict status=500 latency_ms=4.89"}
+{"time":"2026-04-25T11:32:51","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-25T11:32:51","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=3.48"}
+{"time":"2026-04-25T11:32:51","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T11:34:57","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T11:35:29","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T11:35:53","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T11:35:53","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=182294.27"}
+{"time":"2026-04-25T11:35:53","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-25T11:35:53","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.8"}
+{"time":"2026-04-25T11:47:26","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-25T11:47:26","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=29.29"}
+{"time":"2026-04-25T11:47:26","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T11:49:07","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T11:49:39","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T11:49:56","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T11:49:56","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=149256.72"}
+{"time":"2026-04-25T11:49:56","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T11:51:35","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T11:52:07","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T11:52:24","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T11:52:24","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=148133.89"}
+{"time":"2026-04-25T11:52:24","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T11:54:06","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T11:54:37","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T11:54:54","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T11:54:54","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=149931.75"}
+{"time":"2026-04-25T14:41:09","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-25T14:41:09","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=5.17"}
+{"time":"2026-04-25T14:41:09","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T14:42:33","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T14:42:55","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T14:43:09","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T14:43:09","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=119723.85"}
+{"time":"2026-04-25T14:43:09","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T14:44:31","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T14:44:53","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T14:45:07","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T14:45:07","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=117795.0"}
+{"time":"2026-04-25T14:45:07","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T14:46:31","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T14:46:54","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T14:47:07","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T14:47:07","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=120468.51"}
+{"time":"2026-04-25T15:01:22","level":"INFO","module":"main","message":"Incoming: GET /docs client=127.0.0.1"}
+{"time":"2026-04-25T15:01:22","level":"INFO","module":"main","message":"Completed: GET /docs status=200 latency_ms=2.53"}
+{"time":"2026-04-25T15:01:23","level":"INFO","module":"main","message":"Incoming: GET /openapi.json client=127.0.0.1"}
+{"time":"2026-04-25T15:01:23","level":"INFO","module":"main","message":"Completed: GET /openapi.json status=200 latency_ms=27.92"}
+{"time":"2026-04-25T15:01:23","level":"INFO","module":"main","message":"Incoming: GET /predictions client=127.0.0.1"}
+{"time":"2026-04-25T15:01:23","level":"INFO","module":"main","message":"Completed: GET /predictions status=200 latency_ms=7.19"}
+{"time":"2026-04-25T15:01:24","level":"INFO","module":"main","message":"Incoming: GET /favicon.ico client=127.0.0.1"}
+{"time":"2026-04-25T15:01:24","level":"INFO","module":"main","message":"Completed: GET /favicon.ico status=404 latency_ms=2.63"}
+{"time":"2026-04-25T16:27:01","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-25T16:27:01","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=8.57"}
+{"time":"2026-04-25T16:27:01","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T16:29:47","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T16:30:08","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T16:30:22","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T16:30:22","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=200957.97"}
+{"time":"2026-04-25T16:30:22","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T16:31:37","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T16:32:03","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T16:32:17","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T16:32:17","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=114971.57"}
+{"time":"2026-04-25T16:32:17","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T16:33:39","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T16:34:03","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T16:34:16","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T16:34:16","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=118803.66"}
+{"time":"2026-04-25T16:36:31","level":"INFO","module":"main","message":"Incoming: GET /predictions client=127.0.0.1"}
+{"time":"2026-04-25T16:36:31","level":"INFO","module":"main","message":"Completed: GET /predictions status=200 latency_ms=4.7"}
+{"time":"2026-04-25T16:50:28","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-25T16:50:28","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=3.47"}
+{"time":"2026-04-25T16:50:28","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T16:51:57","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T16:52:20","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T16:52:35","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T16:52:35","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=126581.84"}
+{"time":"2026-04-25T16:52:35","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T16:54:00","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T16:54:23","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T16:54:37","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T16:54:37","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=122185.03"}
+{"time":"2026-04-25T16:54:37","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T16:56:01","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T16:56:23","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T16:56:37","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T16:56:37","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=119837.96"}
+{"time":"2026-04-25T17:07:01","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-25T17:07:01","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=3.46"}
+{"time":"2026-04-25T17:07:01","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T17:08:27","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T17:08:51","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T17:09:05","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T17:09:05","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=124515.68"}
+{"time":"2026-04-25T17:09:05","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T17:10:32","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T17:10:55","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T17:11:10","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T17:11:10","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=124361.65"}
+{"time":"2026-04-25T17:11:10","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T17:12:37","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T17:13:00","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T17:13:13","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T17:13:13","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=123417.83"}
+{"time":"2026-04-25T20:40:40","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-25T20:40:40","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=7.63"}
+{"time":"2026-04-25T20:40:40","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T20:42:08","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T20:42:31","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T20:42:45","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T20:42:45","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=125130.75"}
+{"time":"2026-04-25T20:42:45","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T20:44:09","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T20:44:31","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T20:44:45","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T20:44:45","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=119910.62"}
+{"time":"2026-04-25T20:53:38","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-25T20:53:38","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=2.07"}
+{"time":"2026-04-25T20:53:38","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T20:55:00","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T20:55:22","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T20:55:37","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T20:55:37","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=119038.49"}
+{"time":"2026-04-25T20:55:37","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T20:57:00","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T20:57:23","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T20:57:37","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T20:57:37","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=119964.72"}
+{"time":"2026-04-25T20:57:37","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T20:59:00","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T20:59:22","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T20:59:35","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T20:59:35","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=118831.83"}
+{"time":"2026-04-25T21:23:33","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-25T21:23:33","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=1.8"}
+{"time":"2026-04-25T21:23:33","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T21:24:57","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T21:25:19","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T21:25:33","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T21:25:33","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=119425.96"}
+{"time":"2026-04-25T21:25:33","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T21:26:59","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T21:27:21","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T21:27:34","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T21:27:34","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=121969.77"}
+{"time":"2026-04-25T21:27:35","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-25T21:28:58","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-25T21:29:21","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-25T21:29:35","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-25T21:29:35","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=120221.98"}
+{"time":"2026-04-26T17:12:38","level":"INFO","module":"main","message":"Incoming: GET /health client=127.0.0.1"}
+{"time":"2026-04-26T17:12:38","level":"INFO","module":"main","message":"Completed: GET /health status=200 latency_ms=10.82"}
+{"time":"2026-04-26T17:12:38","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-26T17:13:50","level":"INFO","module":"main","message":"Incoming: GET /docs client=127.0.0.1"}
+{"time":"2026-04-26T17:13:50","level":"INFO","module":"main","message":"Completed: GET /docs status=200 latency_ms=0.64"}
+{"time":"2026-04-26T17:13:51","level":"INFO","module":"main","message":"Incoming: GET /openapi.json client=127.0.0.1"}
+{"time":"2026-04-26T17:13:51","level":"INFO","module":"main","message":"Completed: GET /openapi.json status=200 latency_ms=24.62"}
+{"time":"2026-04-26T17:13:53","level":"INFO","module":"main","message":"Incoming: GET /predictions client=127.0.0.1"}
+{"time":"2026-04-26T17:13:53","level":"INFO","module":"main","message":"Completed: GET /predictions status=200 latency_ms=5.01"}
+{"time":"2026-04-26T17:14:13","level":"INFO","module":"main","message":"Retrain actor1: exit=0"}
+{"time":"2026-04-26T17:14:42","level":"INFO","module":"main","message":"Retrain actor2: exit=0"}
+{"time":"2026-04-26T17:15:08","level":"INFO","module":"main","message":"Retrain actor3: exit=0"}
+{"time":"2026-04-26T17:15:08","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=150164.98"}
+{"time":"2026-04-26T17:15:08","level":"INFO","module":"main","message":"Incoming: POST /retrain client=127.0.0.1"}
+{"time":"2026-04-26T17:15:57","level":"INFO","module":"main","message":"Retrain actor1: exit=3221225786"}
+{"time":"2026-04-26T17:15:58","level":"INFO","module":"main","message":"Retrain actor2: exit=3221225786"}
+{"time":"2026-04-26T17:16:00","level":"INFO","module":"main","message":"Retrain actor3: exit=3221225786"}
+{"time":"2026-04-26T17:16:00","level":"INFO","module":"main","message":"Completed: POST /retrain status=200 latency_ms=52540.37"}

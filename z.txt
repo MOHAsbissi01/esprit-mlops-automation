@@ -1,0 +1,14 @@
+Terminal 1 — MLflow
+
+powershell =====> cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+python -m mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri ./mlflow/mlruns --default-artifact-root ./mlflow/mlruns --workers 1
+ --------------------
+
+Terminal 2 — FastAPI
+powershell     =====> cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+python -m uvicorn main:app --host 0.0.0.0 --port 8000
+ ----------------------------------
+Terminal 3 — n8n
+
+powershelln8n start
+Wait for: Editor is now accessible via: http://localhost:5678

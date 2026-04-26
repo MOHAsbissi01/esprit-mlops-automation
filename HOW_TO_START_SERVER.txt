@@ -1,0 +1,106 @@
+================================================================
+  HOW TO START THE FASTAPI SERVER (ml_api)
+  ESPRIT University — ML Automation System
+================================================================
+
+IMPORTANT: You MUST do this EVERY TIME before using n8n workflows.
+The server does NOT start automatically.
+
+----------------------------------------------------------------
+STEP 1 — Open PowerShell
+----------------------------------------------------------------
+  - Press  Windows + X
+  - Click "Windows PowerShell" or "Terminal"
+
+----------------------------------------------------------------
+STEP 2 — Navigate to the project folder
+----------------------------------------------------------------
+  Run this command:
+
+    cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api"
+
+----------------------------------------------------------------
+STEP 3 — Start the FastAPI server
+----------------------------------------------------------------
+  Run this command:
+
+    python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+  Wait until you see this message:
+    INFO:     Application startup complete.
+
+  The server is now running on port 8000.
+
+  ⚠ DO NOT close this PowerShell window while using n8n!
+    Closing it will stop the server.
+
+----------------------------------------------------------------
+STEP 4 — Verify the server is working
+----------------------------------------------------------------
+  Open a NEW PowerShell window and run:
+
+    python -c "import urllib.request, json; r=urllib.request.urlopen('http://127.0.0.1:8000/health'); print(json.dumps(json.loads(r.read()), indent=2))"
+
+  You should see a response like:
+    {
+      "status": "ok",
+      "version": "2.0.0",
+      ...
+    }
+
+  If you see this → the server is running correctly ✓
+
+----------------------------------------------------------------
+STEP 5 — Use n8n
+----------------------------------------------------------------
+  Your n8n workflows connect to the server using:
+
+    FROM YOUR BROWSER / TERMINAL:
+      http://127.0.0.1:8000
+
+    FROM INSIDE n8n (Docker):
+      http://host.docker.internal:8000
+
+  Available endpoints:
+    GET  /health           → Check server status
+    POST /predict          → Run a prediction
+    POST /retrain          → Trigger model retraining
+    POST /save-n8n-result  → Save result from n8n
+    GET  /predictions      → List stored predictions
+    GET  /docs             → Interactive API docs (Swagger UI)
+
+----------------------------------------------------------------
+STEP 6 — Stop the server (when done)
+----------------------------------------------------------------
+  Go back to the PowerShell window from Step 3.
+  Press:  Ctrl + C
+
+----------------------------------------------------------------
+TROUBLESHOOTING
+----------------------------------------------------------------
+
+Problem : 'uvicorn' is not recognized
+Solution: Always use "python -m uvicorn" (NOT just "uvicorn")
+
+Problem : Unable to connect to the remote server
+Solution: The server is not running. Repeat Steps 2 and 3.
+
+Problem : Port 8000 already in use
+Solution: Run this to free the port:
+    netstat -ano | findstr :8000
+  Then kill the process:
+    taskkill /PID <PID_NUMBER> /F
+  Then restart with Step 3.
+
+Problem : ModuleNotFoundError (missing package)
+Solution: Install missing packages:
+    pip install fastapi uvicorn scikit-learn xgboost pandas pydantic
+
+================================================================
+  QUICK REFERENCE (copy-paste ready)
+================================================================
+
+  cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api"
+  python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+================================================================

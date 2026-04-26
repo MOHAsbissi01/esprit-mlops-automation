@@ -1,0 +1,756 @@
+[
+  {
+    "timestamp": "string",
+    "actor": "string",
+    "task": "string",
+    "result": "string",
+    "latency_ms": 0.0,
+    "source": "n8n-workflow"
+  },
+  {
+    "timestamp": "2026-04-17T19:56:59.953267+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 5
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2131.412,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-17T19:56:59.953267+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2131.412,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-17T20:03:57.479162+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 5
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.236,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-17T20:03:57.479162+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.236,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-17T21:10:30.577047+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 5
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 23.983,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-17T21:10:30.577047+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 23.983,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-18T19:37:45.085874+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 9307.683,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-18T19:37:45.085874+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 9307.683,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-18T19:54:46.969122+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.908,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-18T19:54:46.969122+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.908,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-18T20:49:39.033307+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 5.918,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-18T20:50:47.886058+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.547,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:19:44.920462+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 28245.489,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:19:44.920462+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 28245.489,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:25:03.508179+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 5.627,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:25:03.508179+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 5.627,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:31:19.868735+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 6.825,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:31:19.868735+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 6.825,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:34:56.244994+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.348,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:34:56.244994+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.348,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:37:18.673150+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.912,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:37:18.673150+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.912,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:38:26.947401+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 2,
+      "temperature": 55
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.47,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:38:26.947401+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.47,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:39:26.620977+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 2,
+      "temperature": 55
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.056,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:39:26.620977+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.056,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:41:12.948695+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.771,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:41:12.948695+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.771,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:43:07.192394+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 5.402,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:43:07.192394+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 5.402,
+    "source": "n8n-extended-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T21:06:39.144412+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 33.769,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T21:06:39.144412+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 33.769,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T21:08:56.969610+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 7.25,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T21:08:56.969610+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 7.25,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T21:10:22.697776+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 6.074,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T21:10:22.697776+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 6.074,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T21:15:28.324141+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.213,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T21:15:28.324141+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.213,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T21:16:49.395616+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.346,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T21:16:49.395616+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.346,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-20T07:07:04.887443+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 13166.653,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-20T07:07:04.887443+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "result": 3.0619583129882812,
+    "latency_ms": 13166.653,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-20T08:08:33.132490+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 35.683,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-20T08:08:33.132490+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "result": 3.0619583129882812,
+    "latency_ms": 35.683,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-23T22:20:22.738379+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "mode_co2_mean": 45.3,
+      "annee": 2023,
+      "mois_sin": 0.5,
+      "mois_cos": 0.866,
+      "pm25": 18.4,
+      "no2": 32.1,
+      "aqi_index": 75.0,
+      "co2_lag1": 42.0,
+      "co2_lag3": 39.5,
+      "energie_lag1": 120.0,
+      "energie_lag3": 115.0,
+      "aqi_lag1": 72.0,
+      "pm25_lag1": 17.8,
+      "co2_roll3": 40.8,
+      "energie_roll3": 117.5,
+      "pm25_roll3": 18.0
+    },
+    "result": 2.266724109649658,
+    "latency_ms": 3157.866,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-24T08:11:02.666622+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "mode_co2_mean": 45.3,
+      "annee": 2023,
+      "mois_sin": 0.5,
+      "mois_cos": 0.866,
+      "pm25": 18.4,
+      "no2": 32.1,
+      "aqi_index": 75,
+      "co2_lag1": 42,
+      "co2_lag3": 39.5,
+      "energie_lag1": 120,
+      "energie_lag3": 115,
+      "aqi_lag1": 72,
+      "pm25_lag1": 17.8,
+      "co2_roll3": 40.8,
+      "energie_roll3": 117.5,
+      "pm25_roll3": 18
+    },
+    "result": 2.266724109649658,
+    "latency_ms": 32436.462,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-24T08:11:45.436525+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "zone_encoded": 3,
+      "line_encoded": 2,
+      "mode_encoded": 1,
+      "hour": 8,
+      "rush_hour": 1,
+      "is_weekend": 0,
+      "congestion_index": 0.65,
+      "vitesse_kmh": 22.5,
+      "temps_trajet_min": 18
+    },
+    "result": 42.824241638183594,
+    "latency_ms": 52.844,
+    "status": "success"
+  }
+]

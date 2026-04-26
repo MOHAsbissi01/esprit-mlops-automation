@@ -1,0 +1,451 @@
+{
+  "name": "MLOps Activation Workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "node-1-start",
+      "name": "▶️ Start MLops",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        120,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8000/health",
+        "options": {
+          "timeout": 10000,
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "node-2-health",
+      "name": "🏥 Health Check",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        340,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "cond-api-healthy",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "ok",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "node-3-if",
+      "name": "🔀 API Healthy?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        560,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/retrain",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"actor\": \"actor1\" }",
+        "options": {
+          "timeout": 600000,
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "node-4-train1",
+      "name": "🏋️ Train Actor 1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        780,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/retrain",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"actor\": \"actor2\" }",
+        "options": {
+          "timeout": 600000,
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "node-5-train2",
+      "name": "🏋️ Train Actor 2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        1000,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/retrain",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"actor\": \"actor3\" }",
+        "options": {
+          "timeout": 600000,
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "node-6-train3",
+      "name": "🏋️ Train Actor 3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        1220,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/health",
+        "options": {
+          "timeout": 10000,
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "id": "node-7-mlflow",
+      "name": "📊 Check MLflow",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        1440,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const retrain = $('🏋️ Train Actor 3').item.json;\n\nreturn [{\n  json: {\n    status: \"SUCCESS\",\n    timestamp: new Date().toISOString(),\n    actors_trained: \"actor1, actor2, actor3\",\n    actor1_status: retrain.actors.actor1.status,\n    actor2_status: retrain.actors.actor2.status,\n    actor3_status: retrain.actors.actor3.status,\n    mlflow_url: \"http://localhost:5000\",\n    fastapi_url: \"http://localhost:8000/docs\",\n    predictions_url: \"http://localhost:8000/predictions\"\n  }\n}];"
+      },
+      "id": "node-8-code-summary",
+      "name": "✅ Build Success Summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1660,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "prompt": {
+          "promptType": "define",
+          "text": "Write a 2-sentence professional summary for an ML pipeline report. All 3 actors succeeded: actor1 (Ecological - CO2 energy clustering), actor2 (Mobility - passenger load cancellation), actor3 (Security - severity risk anomaly). Be concise and professional."
+        }
+      },
+      "id": "node-12-llm-chain",
+      "name": "🤖 Gemini Summary",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        1880,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash",
+        "options": {}
+      },
+      "id": "node-13-gemini-model",
+      "name": "🤖 Google Gemini Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1880,
+        500
+      ],
+      "credentials": {
+        "googlePalmApi": {
+          "id": "YOUR_GEMINI_CREDENTIAL_ID",
+          "name": "Google Gemini account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f1",
+              "name": "status",
+              "value": "FAILED",
+              "type": "string"
+            },
+            {
+              "id": "f2",
+              "name": "timestamp",
+              "value": "={{ $now }}",
+              "type": "string"
+            },
+            {
+              "id": "f3",
+              "name": "reason",
+              "value": "FastAPI not reachable on port 8000",
+              "type": "string"
+            },
+            {
+              "id": "f4",
+              "name": "fix",
+              "value": "Run: python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "node-9-failure-set",
+      "name": "❌ Build Failure Summary",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        780,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "toEmail": "sbiss@esprit.tn",
+        "subject": "={{ '✅ MLops Pipeline — SUCCESS ' + $now }}",
+        "emailType": "html",
+        "message": "<h2 style=\"color:#2e7d32\">✅ MLops Pipeline Completed Successfully</h2>\n<table border=\"1\" cellpadding=\"8\" style=\"border-collapse:collapse\">\n  <tr><td><b>Timestamp</b></td><td>{{ $('✅ Build Success Summary').item.json.timestamp }}</td></tr>\n  <tr><td><b>Status</b></td><td style=\"color:green\">{{ $('✅ Build Success Summary').item.json.status }}</td></tr>\n  <tr><td><b>Actors Trained</b></td><td>{{ $('✅ Build Success Summary').item.json.actors_trained }}</td></tr>\n  <tr><td><b>MLflow UI</b></td><td><a href=\"{{ $('✅ Build Success Summary').item.json.mlflow_url }}\">{{ $('✅ Build Success Summary').item.json.mlflow_url }}</a></td></tr>\n  <tr><td><b>FastAPI Docs</b></td><td><a href=\"{{ $('✅ Build Success Summary').item.json.fastapi_url }}\">{{ $('✅ Build Success Summary').item.json.fastapi_url }}</a></td></tr>\n  <tr><td><b>Predictions</b></td><td><a href=\"{{ $('✅ Build Success Summary').item.json.predictions_url }}\">{{ $('✅ Build Success Summary').item.json.predictions_url }}</a></td></tr>\n</table>\n<p>All 3 ML actors retrained and logged to MLflow. Models are live.</p>\n<hr style=\"margin:20px 0; border:1px solid #eee\"/>\n<h3 style=\"color:#1565c0\">🤖 AI Summary</h3>\n<p style=\"font-style:italic; color:#333; background:#f5f5f5; padding:12px; border-radius:6px;\">\n  {{ $json.text }}\n</p>",
+        "options": {}
+      },
+      "id": "node-10-gmail-success",
+      "name": "📧 Gmail — Success",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [
+        2100,
+        300
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "YOUR_GMAIL_CREDENTIAL_ID",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "toEmail": "sbiss@esprit.tn",
+        "subject": "={{ '❌ MLops Pipeline — FAILED ' + $now }}",
+        "emailType": "html",
+        "message": "<h2 style=\"color:#c62828\">❌ MLops Pipeline Failed</h2>\n<table border=\"1\" cellpadding=\"8\" style=\"border-collapse:collapse\">\n  <tr><td><b>Timestamp</b></td><td>{{ $json.timestamp }}</td></tr>\n  <tr><td><b>Status</b></td><td style=\"color:red\">{{ $json.status }}</td></tr>\n  <tr><td><b>Reason</b></td><td>{{ $json.reason }}</td></tr>\n  <tr><td><b>Fix</b></td><td><code>{{ $json.fix }}</code></td></tr>\n</table>\n<p>Check that FastAPI is running before triggering the MLops workflow.</p>",
+        "options": {}
+      },
+      "id": "node-11-gmail-failure",
+      "name": "📧 Gmail — Failure",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [
+        1000,
+        500
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "YOUR_GMAIL_CREDENTIAL_ID",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "▶️ Start MLops": {
+      "main": [
+        [
+          {
+            "node": "🏥 Health Check",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🏥 Health Check": {
+      "main": [
+        [
+          {
+            "node": "🔀 API Healthy?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🔀 API Healthy?": {
+      "main": [
+        [
+          {
+            "node": "🏋️ Train Actor 1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "❌ Build Failure Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🏋️ Train Actor 1": {
+      "main": [
+        [
+          {
+            "node": "🏋️ Train Actor 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🏋️ Train Actor 2": {
+      "main": [
+        [
+          {
+            "node": "🏋️ Train Actor 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🏋️ Train Actor 3": {
+      "main": [
+        [
+          {
+            "node": "📊 Check MLflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "📊 Check MLflow": {
+      "main": [
+        [
+          {
+            "node": "✅ Build Success Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "✅ Build Success Summary": {
+      "main": [
+        [
+          {
+            "node": "🤖 Gemini Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🤖 Gemini Summary": {
+      "main": [
+        [
+          {
+            "node": "📧 Gmail — Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🤖 Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "🤖 Gemini Summary",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "❌ Build Failure Summary": {
+      "main": [
+        [
+          {
+            "node": "📧 Gmail — Failure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "staticData": null,
+  "tags": [
+    "ml",
+    "esprit",
+    "mlops",
+    "activation"
+  ],
+  "triggerCount": 1,
+  "versionId": "mlops-activation-v1"
+}

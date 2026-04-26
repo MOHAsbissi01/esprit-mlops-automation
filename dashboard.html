@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML Automation Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0b0f1a;
+      --surface:   #111827;
+      --card:      #1a2235;
+      --border:    #1f2d45;
+      --accent1:   #22d3ee;   /* teal  — actor1 */
+      --accent2:   #a78bfa;   /* purple — actor2 */
+      --accent3:   #f87171;   /* red   — actor3 */
+      --success:   #34d399;
+      --warning:   #fbbf24;
+      --text:      #e2e8f0;
+      --muted:     #64748b;
+      --radius:    14px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 32px 24px;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    header .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #22d3ee22, #a78bfa22);
+      border: 1px solid #22d3ee44;
+      color: var(--accent1);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+    header h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      background: linear-gradient(135deg, #e2e8f0 30%, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* ── Health bar ── */
+    #health-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 40px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    #health-dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--muted);
+      transition: background .3s;
+    }
+    #health-dot.ok  { background: var(--success); box-shadow: 0 0 8px var(--success); }
+    #health-dot.err { background: var(--accent3); }
+
+    /* ── Grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto 48px;
+    }
+
+    /* ── Actor Card ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px #00000050; }
+
+    .card-header { display: flex; align-items: center; gap: 14px; }
+    .card-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: grid; place-items: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .actor1 .card-icon { background: #22d3ee18; border: 1px solid #22d3ee44; }
+    .actor2 .card-icon { background: #a78bfa18; border: 1px solid #a78bfa44; }
+    .actor3 .card-icon { background: #f8717118; border: 1px solid #f8717144; }
+
+    .card-title { font-size: 15px; font-weight: 600; }
+    .card-subtitle { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    /* ── Select + button ── */
+    .controls { display: flex; gap: 10px; }
+    select, button {
+      font-family: inherit;
+      font-size: 13px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      outline: none;
+      cursor: pointer;
+    }
+    select {
+      background: var(--surface);
+      color: var(--text);
+      padding: 8px 12px;
+      flex: 1;
+      appearance: none;
+    }
+    .btn-predict {
+      padding: 8px 18px;
+      font-weight: 600;
+      color: #0b0f1a;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: opacity .2s, transform .1s;
+      white-space: nowrap;
+    }
+    .btn-predict:active { transform: scale(.97); }
+    .btn-predict:disabled { opacity: .5; cursor: not-allowed; }
+    .actor1 .btn-predict { background: var(--accent1); }
+    .actor2 .btn-predict { background: var(--accent2); }
+    .actor3 .btn-predict { background: var(--accent3); }
+
+    /* ── Result box ── */
+    .result-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      min-height: 72px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: border-color .3s;
+    }
+    .result-box.loading { border-color: var(--warning); }
+    .result-box.success { border-color: var(--success); }
+    .result-box.error   { border-color: var(--accent3); }
+
+    .result-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); }
+    .result-value { font-size: 26px; font-weight: 700; color: var(--text); }
+    .result-meta  { font-size: 11px; color: var(--muted); }
+
+    /* ── Log section ── */
+    .log-section {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .log-section h2 { font-size: 14px; font-weight: 600; color: var(--muted); margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase; }
+    #log-output {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      min-height: 100px;
+      max-height: 220px;
+      overflow-y: auto;
+      line-height: 1.8;
+    }
+    #log-output .log-ok   { color: var(--success); }
+    #log-output .log-err  { color: var(--accent3); }
+    #log-output .log-info { color: var(--accent1); }
+
+    /* ── Spinner ── */
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner {
+      display: inline-block;
+      width: 14px; height: 14px;
+      border: 2px solid #ffffff30;
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    /* ── Pulse animation on new result ── */
+    @keyframes pulse { 0%,100%{ opacity:1 } 50%{ opacity:.5 } }
+    .pulse { animation: pulse .5s ease 2; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">Live Demo</div>
+    <h1>ML Automation Dashboard</h1>
+    <p>Real-time predictions from FastAPI — Actor 1 · 2 · 3</p>
+  </header>
+
+  <div id="health-bar">
+    <div id="health-dot"></div>
+    <span id="health-text">Checking API…</span>
+  </div>
+
+  <div class="grid">
+
+    <!-- Actor 1 -->
+    <div class="card actor1">
+      <div class="card-header">
+        <div class="card-icon">🌿</div>
+        <div>
+          <div class="card-title">Actor 1 — Ecological</div>
+          <div class="card-subtitle">CO₂ · Energy · Clustering</div>
+        </div>
+      </div>
+      <div class="controls">
+        <select id="task-actor1">
+          <option value="co2">Task: CO₂ Prediction</option>
+          <option value="energy">Task: Energy Prediction</option>
+          <option value="cluster">Task: Pollution Cluster</option>
+        </select>
+        <button class="btn-predict" id="btn-actor1" onclick="predict('actor1')">Run</button>
+      </div>
+      <div class="result-box" id="result-actor1">
+        <div class="result-label">Result</div>
+        <div class="result-value" id="val-actor1">—</div>
+        <div class="result-meta" id="meta-actor1">Press Run to call /predict</div>
+      </div>
+    </div>
+
+    <!-- Actor 2 -->
+    <div class="card actor2">
+      <div class="card-header">
+        <div class="card-icon">🚌</div>
+        <div>
+          <div class="card-title">Actor 2 — Mobility</div>
+          <div class="card-subtitle">Charge · Cancellation Risk</div>
+        </div>
+      </div>
+      <div class="controls">
+        <select id="task-actor2">
+          <option value="charge">Task: Passenger Load</option>
+          <option value="cancellation">Task: Cancellation Risk</option>
+        </select>
+        <button class="btn-predict" id="btn-actor2" onclick="predict('actor2')">Run</button>
+      </div>
+      <div class="result-box" id="result-actor2">
+        <div class="result-label">Result</div>
+        <div class="result-value" id="val-actor2">—</div>
+        <div class="result-meta" id="meta-actor2">Press Run to call /predict</div>
+      </div>
+    </div>
+
+    <!-- Actor 3 -->
+    <div class="card actor3">
+      <div class="card-header">
+        <div class="card-icon">🔒</div>
+        <div>
+          <div class="card-title">Actor 3 — Security</div>
+          <div class="card-subtitle">Severity · Risk Zone · Anomaly</div>
+        </div>
+      </div>
+      <div class="controls">
+        <select id="task-actor3">
+          <option value="severity">Task: Accident Severity</option>
+          <option value="risk_cluster">Task: Risk Zone Cluster</option>
+          <option value="anomaly">Task: Anomaly Detection</option>
+        </select>
+        <button class="btn-predict" id="btn-actor3" onclick="predict('actor3')">Run</button>
+      </div>
+      <div class="result-box" id="result-actor3">
+        <div class="result-label">Result</div>
+        <div class="result-value" id="val-actor3">—</div>
+        <div class="result-meta" id="meta-actor3">Press Run to call /predict</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="log-section">
+    <h2>📋 Request Log</h2>
+    <div id="log-output"><span class="log-info">Waiting for predictions…</span></div>
+  </div>
+
+  <script>
+    const API = "http://localhost:8000";
+
+    // ── Default feature payloads per actor ──────────────────────────────────
+    const FEATURES = {
+      actor1: {
+        zone_encoded: 2, mode_encoded: 1, mode_co2_mean: 45.3,
+        annee: 2023, mois_sin: 0.5, mois_cos: 0.866,
+        pm25: 18.4, no2: 32.1, aqi_index: 75.0,
+        co2_lag1: 42.0, co2_lag3: 39.5,
+        energie_lag1: 120.0, energie_lag3: 115.0,
+        aqi_lag1: 72.0, pm25_lag1: 17.8,
+        co2_roll3: 40.8, energie_roll3: 117.5, pm25_roll3: 18.0
+      },
+      actor2: {
+        zone_encoded: 3, line_encoded: 2, mode_encoded: 1,
+        hour: 8, rush_hour: 1, is_weekend: 0,
+        congestion_index: 0.65, vitesse_kmh: 22.5, temps_trajet_min: 18.0
+      },
+      actor3: {
+        zone_sk: 3, mois: 6,
+        nb_accidents: 12, nb_graves: 2,
+        volume_crimes: 450, taux_criminalite: 4.2,
+        usagers_vulnerables: 5
+      }
+    };
+
+    // ── Health check on load ─────────────────────────────────────────────────
+    async function checkHealth() {
+      const dot  = document.getElementById('health-dot');
+      const text = document.getElementById('health-text');
+      try {
+        const r    = await fetch(`${API}/health`);
+        const data = await r.json();
+        if (data.status === 'ok') {
+          dot.className  = 'ok';
+          text.textContent = `API online — v${data.version} · ${data.predictions_stored} predictions stored`;
+          log(`✅ Health OK — version ${data.version}`, 'log-ok');
+        } else {
+          throw new Error('non-ok status');
+        }
+      } catch (e) {
+        dot.className  = 'err';
+        text.textContent = 'API unreachable — make sure Docker is running on port 8000';
+        log(`❌ Health check failed: ${e.message}`, 'log-err');
+      }
+    }
+
+    // ── Predict ──────────────────────────────────────────────────────────────
+    async function predict(actor) {
+      const task    = document.getElementById(`task-${actor}`).value;
+      const btn     = document.getElementById(`btn-${actor}`);
+      const box     = document.getElementById(`result-${actor}`);
+      const valEl   = document.getElementById(`val-${actor}`);
+      const metaEl  = document.getElementById(`meta-${actor}`);
+
+      // Loading state
+      btn.disabled   = true;
+      btn.innerHTML  = '<span class="spinner"></span>…';
+      box.className  = 'result-box loading';
+      valEl.textContent  = '…';
+      metaEl.textContent = 'Calling /predict…';
+
+      const payload = { actor, task, features: FEATURES[actor] };
+      log(`→ POST /predict  { actor: "${actor}", task: "${task}" }`, 'log-info');
+
+      const t0 = Date.now();
+      try {
+        const r    = await fetch(`${API}/predict`, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(payload)
+        });
+        const data = await r.json();
+        const ms   = Date.now() - t0;
+
+        if (data.status === 'success') {
+          const result = typeof data.result === 'number'
+            ? data.result.toFixed(4)
+            : data.result;
+
+          valEl.textContent  = result;
+          metaEl.textContent = `Latency: ${ms}ms · ${new Date().toLocaleTimeString()}`;
+          box.className      = 'result-box success';
+          valEl.classList.add('pulse');
+          setTimeout(() => valEl.classList.remove('pulse'), 1000);
+          log(`✅ ${actor}/${task} → result: ${result}  (${ms}ms)`, 'log-ok');
+        } else {
+          throw new Error(JSON.stringify(data));
+        }
+      } catch (e) {
+        valEl.textContent  = 'Error';
+        metaEl.textContent = e.message;
+        box.className      = 'result-box error';
+        log(`❌ ${actor}/${task} failed: ${e.message}`, 'log-err');
+      } finally {
+        btn.disabled  = false;
+        btn.textContent = 'Run';
+      }
+    }
+
+    // ── Log helper ──────────────────────────────────────────────────────────
+    function log(msg, cls = '') {
+      const out  = document.getElementById('log-output');
+      const line = document.createElement('div');
+      line.className   = cls;
+      line.textContent = `[${new Date().toLocaleTimeString()}]  ${msg}`;
+      out.appendChild(line);
+      out.scrollTop = out.scrollHeight;
+    }
+
+    // ── Init ────────────────────────────────────────────────────────────────
+    checkHealth();
+  </script>
+</body>
+</html>
