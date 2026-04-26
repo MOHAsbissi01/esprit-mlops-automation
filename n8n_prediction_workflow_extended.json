@@ -1,0 +1,464 @@
+{
+  "name": "ML Prediction Workflow — Extended",
+  "nodes": [
+
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ml-predict",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [120, 400],
+      "webhookId": "ml-predict-webhook"
+    },
+
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/predict",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [{ "name": "Content-Type", "value": "application/json" }]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ actor: $json.body.actor ?? $json.actor, task: $json.body.task ?? $json.task, features: $json.body.features ?? $json.features ?? {} }) }}",
+        "options": { "timeout": 30000 }
+      },
+      "id": "http-request-fastapi",
+      "name": "HTTP Request FastAPI",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [360, 400]
+    },
+
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [{
+            "id": "status-check",
+            "leftValue": "={{ $json.status }}",
+            "rightValue": "success",
+            "operator": { "type": "string", "operation": "equals" }
+          }],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-success",
+      "name": "IF Success",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [600, 400]
+    },
+
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            { "id": "a1", "name": "actor",       "value": "={{ $json.actor }}",      "type": "string" },
+            { "id": "a2", "name": "task",        "value": "={{ $json.task }}",       "type": "string" },
+            { "id": "a3", "name": "result",      "value": "={{ $json.result }}",     "type": "object" },
+            { "id": "a4", "name": "latency_ms",  "value": "={{ $json.latency_ms }}", "type": "number" },
+            { "id": "a5", "name": "timestamp",   "value": "={{ $json.timestamp }}",  "type": "string" },
+            { "id": "a6", "name": "status",      "value": "={{ $json.status }}",     "type": "string" },
+            { "id": "a7", "name": "risk_label",
+              "value": "={{ ($json.actor === 'actor2' && $json.result?.cancellation_risk === 'High') || ($json.actor === 'actor3' && ($json.result?.severity === 'High' || $json.result?.anomaly === true)) || ($json.actor === 'actor1' && $json.result?.cluster === 2) ? 'HIGH_RISK' : 'NORMAL' }}",
+              "type": "string"
+            },
+            { "id": "a8", "name": "summary",
+              "value": "={{ 'Actor: ' + $json.actor + ' | Task: ' + $json.task + ' | Risk: ' + (($json.actor === 'actor2' && $json.result?.cancellation_risk === 'High') || ($json.actor === 'actor3' && ($json.result?.severity === 'High' || $json.result?.anomaly === true)) || ($json.actor === 'actor1' && $json.result?.cluster === 2) ? 'HIGH_RISK' : 'NORMAL') + ' | Latency: ' + $json.latency_ms + 'ms' }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "set-enrich",
+      "name": "Set — Enrich Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [840, 260]
+    },
+
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+                "conditions": [{
+                  "id": "route-actor1",
+                  "leftValue": "={{ $json.actor }}",
+                  "rightValue": "actor1",
+                  "operator": { "type": "string", "operation": "equals" }
+                }],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Ecological"
+            },
+            {
+              "conditions": {
+                "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+                "conditions": [{
+                  "id": "route-actor2",
+                  "leftValue": "={{ $json.actor }}",
+                  "rightValue": "actor2",
+                  "operator": { "type": "string", "operation": "equals" }
+                }],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Mobility"
+            },
+            {
+              "conditions": {
+                "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+                "conditions": [{
+                  "id": "route-actor3",
+                  "leftValue": "={{ $json.actor }}",
+                  "rightValue": "actor3",
+                  "operator": { "type": "string", "operation": "equals" }
+                }],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Security"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "switch-actor",
+      "name": "Switch — Actor Router",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [1080, 260]
+    },
+
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [{
+            "id": "risk-check",
+            "leftValue": "={{ $json.risk_label }}",
+            "rightValue": "HIGH_RISK",
+            "operator": { "type": "string", "operation": "equals" }
+          }],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-high-risk",
+      "name": "IF High Risk",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1320, 200]
+    },
+
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [{
+            "id": "risk-check-mob",
+            "leftValue": "={{ $json.risk_label }}",
+            "rightValue": "HIGH_RISK",
+            "operator": { "type": "string", "operation": "equals" }
+          }],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-high-risk-mob",
+      "name": "IF High Risk (Mobility)",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1320, 400]
+    },
+
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [{
+            "id": "risk-check-sec",
+            "leftValue": "={{ $json.risk_label }}",
+            "rightValue": "HIGH_RISK",
+            "operator": { "type": "string", "operation": "equals" }
+          }],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-high-risk-sec",
+      "name": "IF High Risk (Security)",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1320, 600]
+    },
+
+    {
+      "parameters": {
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "={{ '🚨 [ESPRIT ML ALERT]\\n\\n🌿 Ecological HIGH RISK\\n📋 Task: ' + $json.task + '\\n📊 Cluster: ' + ($json.result?.cluster ?? 'N/A') + '\\n⚡ CO2: ' + ($json.result?.co2 ?? 'N/A') + '\\n🕒 ' + $json.timestamp + '\\n⏱ Latency: ' + $json.latency_ms + 'ms' }}",
+        "additionalFields": { "parse_mode": "Markdown" }
+      },
+      "id": "telegram-eco",
+      "name": "Telegram — Eco Alert",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [1560, 120],
+      "credentials": { "telegramApi": { "id": "YOUR_TELEGRAM_CREDENTIAL_ID", "name": "Telegram Bot" } }
+    },
+
+    {
+      "parameters": {
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "={{ '🚨 [ESPRIT ML ALERT]\\n\\n🚌 Mobility HIGH RISK\\n📋 Task: ' + $json.task + '\\n⚠️ Cancellation Risk: ' + ($json.result?.cancellation_risk ?? 'N/A') + '\\n🕒 ' + $json.timestamp + '\\n⏱ Latency: ' + $json.latency_ms + 'ms' }}",
+        "additionalFields": { "parse_mode": "Markdown" }
+      },
+      "id": "telegram-mob",
+      "name": "Telegram — Mobility Alert",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [1560, 360],
+      "credentials": { "telegramApi": { "id": "YOUR_TELEGRAM_CREDENTIAL_ID", "name": "Telegram Bot" } }
+    },
+
+    {
+      "parameters": {
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "={{ '🚨 [ESPRIT ML ALERT]\\n\\n🔐 Security HIGH RISK\\n📋 Task: ' + $json.task + '\\n🔴 Severity: ' + ($json.result?.severity ?? 'N/A') + '\\n🎯 Risk Cluster: ' + ($json.result?.risk_cluster ?? 'N/A') + '\\n👾 Anomaly: ' + ($json.result?.anomaly ?? 'N/A') + '\\n🕒 ' + $json.timestamp + '\\n⏱ Latency: ' + $json.latency_ms + 'ms' }}",
+        "additionalFields": { "parse_mode": "Markdown" }
+      },
+      "id": "telegram-sec",
+      "name": "Telegram — Security Alert",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [1560, 560],
+      "credentials": { "telegramApi": { "id": "YOUR_TELEGRAM_CREDENTIAL_ID", "name": "Telegram Bot" } }
+    },
+
+    {
+      "parameters": {
+        "fromEmail": "your-esprit-email@gmail.com",
+        "toEmail": "your-esprit-email@gmail.com",
+        "subject": "={{ '🚨 HIGH RISK Alert — ' + $json.actor + ' / ' + $json.task }}",
+        "emailType": "html",
+        "message": "={{ '<h2>🚨 HIGH RISK Prediction Detected</h2><table border=1 cellpadding=6><tr><th>Field</th><th>Value</th></tr><tr><td>Actor</td><td>' + $json.actor + '</td></tr><tr><td>Task</td><td>' + $json.task + '</td></tr><tr><td>Risk Label</td><td><b style=color:red>' + $json.risk_label + '</b></td></tr><tr><td>Result</td><td>' + JSON.stringify($json.result) + '</td></tr><tr><td>Latency</td><td>' + $json.latency_ms + ' ms</td></tr><tr><td>Timestamp</td><td>' + $json.timestamp + '</td></tr></table><p>Please review the ESPRIT ML Dashboard.</p>' }}",
+        "options": {}
+      },
+      "id": "gmail-alert",
+      "name": "Gmail — High Risk Alert",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [1800, 240],
+      "credentials": { "gmailOAuth2": { "id": "YOUR_GMAIL_CREDENTIAL_ID", "name": "Gmail Account" } }
+    },
+
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": { "__rl": true, "value": "YOUR_GOOGLE_SHEET_ID", "mode": "id" },
+        "sheetName": { "__rl": true, "value": "Sheet1", "mode": "name" },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "timestamp":   "={{ $json.timestamp }}",
+            "actor":       "={{ $json.actor }}",
+            "task":        "={{ $json.task }}",
+            "risk_label":  "={{ $json.risk_label }}",
+            "result_json": "={{ JSON.stringify($json.result) }}",
+            "latency_ms":  "={{ $json.latency_ms }}",
+            "summary":     "={{ $json.summary }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            { "id": "timestamp",   "displayName": "timestamp",   "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "actor",       "displayName": "actor",       "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "task",        "displayName": "task",        "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "risk_label",  "displayName": "risk_label",  "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "result_json", "displayName": "result_json", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "latency_ms",  "displayName": "latency_ms",  "required": false, "defaultMatch": false, "display": true, "type": "number", "canBeUsedToMatch": true },
+            { "id": "summary",     "displayName": "summary",     "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true }
+          ]
+        },
+        "options": {}
+      },
+      "id": "google-sheets-log",
+      "name": "Google Sheets — Log Prediction",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [1320, 820],
+      "credentials": { "googleSheetsOAuth2Api": { "id": "YOUR_SHEETS_CREDENTIAL_ID", "name": "Google Sheets Account" } }
+    },
+
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/save-n8n-result",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [{ "name": "Content-Type", "value": "application/json" }]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ timestamp: $json.timestamp, actor: $json.actor, task: $json.task, result: $json.result, latency_ms: $json.latency_ms, source: 'n8n-extended-workflow' }) }}",
+        "options": { "timeout": 10000 }
+      },
+      "id": "save-prediction",
+      "name": "Save Prediction",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [1080, 820]
+    },
+
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [{
+            "id": "anomaly-check",
+            "leftValue": "={{ $json.risk_label }}",
+            "rightValue": "HIGH_RISK",
+            "operator": { "type": "string", "operation": "equals" }
+          }],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-trigger-retrain",
+      "name": "IF Anomaly → Trigger Retrain?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [2040, 240]
+    },
+
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/retrain",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [{ "name": "Content-Type", "value": "application/json" }]
+        },
+        "options": { "timeout": 600000 }
+      },
+      "id": "trigger-retrain",
+      "name": "Trigger Retraining",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [2280, 160]
+    },
+
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { \"status\": \"success\", \"actor\": $json.record.actor, \"task\": $json.record.task, \"result\": $json.record.result, \"risk_label\": $json.record.result?.risk_label, \"latency_ms\": $json.record.latency_ms, \"timestamp\": $json.record.timestamp, \"total_stored\": $json.total_stored } }}",
+        "options": {}
+      },
+      "id": "respond-success",
+      "name": "Respond Success",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1320, 1020]
+    },
+
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { \"status\": \"error\", \"detail\": $json.detail ?? $json.message ?? \"FastAPI error\" } }}",
+        "options": { "responseCode": 500 }
+      },
+      "id": "respond-error",
+      "name": "Respond Error",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [840, 560]
+    }
+
+  ],
+
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "HTTP Request FastAPI", "type": "main", "index": 0 }]]
+    },
+    "HTTP Request FastAPI": {
+      "main": [[{ "node": "IF Success", "type": "main", "index": 0 }]]
+    },
+    "IF Success": {
+      "main": [
+        [{ "node": "Set — Enrich Fields", "type": "main", "index": 0 }],
+        [{ "node": "Respond Error",       "type": "main", "index": 0 }]
+      ]
+    },
+    "Set — Enrich Fields": {
+      "main": [[
+        { "node": "Switch — Actor Router",      "type": "main", "index": 0 },
+        { "node": "Save Prediction",             "type": "main", "index": 0 },
+        { "node": "Google Sheets — Log Prediction", "type": "main", "index": 0 }
+      ]]
+    },
+    "Switch — Actor Router": {
+      "main": [
+        [{ "node": "IF High Risk",          "type": "main", "index": 0 }],
+        [{ "node": "IF High Risk (Mobility)","type": "main", "index": 0 }],
+        [{ "node": "IF High Risk (Security)","type": "main", "index": 0 }]
+      ]
+    },
+    "IF High Risk": {
+      "main": [
+        [{ "node": "Telegram — Eco Alert",  "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "IF High Risk (Mobility)": {
+      "main": [
+        [{ "node": "Telegram — Mobility Alert", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "IF High Risk (Security)": {
+      "main": [
+        [{ "node": "Telegram — Security Alert", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "Telegram — Eco Alert":      { "main": [[{ "node": "Gmail — High Risk Alert",        "type": "main", "index": 0 }]] },
+    "Telegram — Mobility Alert": { "main": [[{ "node": "Gmail — High Risk Alert",        "type": "main", "index": 0 }]] },
+    "Telegram — Security Alert": { "main": [[{ "node": "Gmail — High Risk Alert",        "type": "main", "index": 0 }]] },
+    "Gmail — High Risk Alert":   { "main": [[{ "node": "IF Anomaly → Trigger Retrain?", "type": "main", "index": 0 }]] },
+    "IF Anomaly → Trigger Retrain?": {
+      "main": [
+        [{ "node": "Trigger Retraining", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "Save Prediction": {
+      "main": [[{ "node": "Respond Success", "type": "main", "index": 0 }]]
+    },
+    "Google Sheets — Log Prediction": {
+      "main": [[]]
+    }
+  },
+
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "staticData": null,
+  "tags": ["ml", "esprit", "extended"],
+  "triggerCount": 1,
+  "versionId": "ml-prediction-extended-v1"
+}

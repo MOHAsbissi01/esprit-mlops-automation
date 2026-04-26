@@ -1,0 +1,259 @@
+================================================================
+  MLOPS FULL ACTIVATION GUIDE — ml_api
+  ESPRIT University — ML Automation System
+  Generated: 2026-04-24
+================================================================
+
+  Stack: FastAPI + MLflow + Docker + n8n + 3 ML Actors
+  Actors: actor1 (Ecologique) | actor2 (Mobilites) | actor3 (Securite)
+
+================================================================
+  OPTION A — LOCAL (Without Docker) — Recommended for Dev
+================================================================
+
+----------------------------------------------------------------
+STEP 1 — Open PowerShell and navigate to the project
+----------------------------------------------------------------
+
+  cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api"
+
+----------------------------------------------------------------
+STEP 2 — Install all Python dependencies
+----------------------------------------------------------------
+
+  pip install -r requirements.txt
+
+  Or manually:
+  pip install fastapi uvicorn scikit-learn xgboost numpy pandas mlflow pydantic
+
+----------------------------------------------------------------
+STEP 3 — Create required directories (first time only)
+----------------------------------------------------------------
+
+  New-Item -ItemType Directory -Force -Path ".\mlflow\mlruns"
+  New-Item -ItemType Directory -Force -Path ".\results"
+
+----------------------------------------------------------------
+STEP 4 — Start MLflow Tracking Server (Terminal Window #1)
+----------------------------------------------------------------
+
+  mlflow server `
+    --host 0.0.0.0 `
+    --port 5000 `
+    --backend-store-uri ./mlflow/mlruns `
+    --default-artifact-root ./mlflow/mlruns
+
+  Wait until you see:
+    [INFO] Starting gunicorn 21.x.x
+    [INFO] Listening at: http://0.0.0.0:5000
+
+  MLflow UI will be available at: http://127.0.0.1:5000
+
+  ⚠ DO NOT close this terminal window!
+
+----------------------------------------------------------------
+STEP 5 — Train the 3 ML Actors (Terminal Window #2)
+----------------------------------------------------------------
+
+  cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api"
+
+  # Train Actor 1 — Ecologique
+  python training/train_actor1.py
+
+  # Train Actor 2 — Mobilites
+  python training/train_actor2.py
+
+  # Train Actor 3 — Securite
+  python training/train_actor3.py
+
+  After each script you should see:
+    Run logged to MLflow: <run_id>
+    Model saved to: actors/models/...
+
+----------------------------------------------------------------
+STEP 6 — Start the FastAPI Server (Terminal Window #3)
+----------------------------------------------------------------
+
+  cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api"
+
+  python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+  Wait until you see:
+    INFO:     Application startup complete.
+
+  FastAPI server running at: http://127.0.0.1:8000
+  Swagger API docs at:       http://127.0.0.1:8000/docs
+
+  ⚠ DO NOT close this terminal window!
+
+----------------------------------------------------------------
+STEP 7 — Verify Everything is Working (Terminal Window #4)
+----------------------------------------------------------------
+
+  # Check FastAPI health
+  python -c "import urllib.request, json; r=urllib.request.urlopen('http://127.0.0.1:8000/health'); print(json.dumps(json.loads(r.read()), indent=2))"
+
+  # Expected response:
+  # {
+  #   "status": "ok",
+  #   "version": "2.0.0",
+  #   ...
+  # }
+
+  # Check MLflow is up
+  python -c "import urllib.request; r=urllib.request.urlopen('http://127.0.0.1:5000/health'); print(r.status)"
+  # Expected: 200
+
+----------------------------------------------------------------
+STEP 8 — Start n8n (if using Docker Desktop)
+----------------------------------------------------------------
+
+  docker run -it --rm `
+    --name n8n `
+    -p 5678:5678 `
+    -v n8n_data:/home/node/.n8n `
+    --add-host=host.docker.internal:host-gateway `
+    docker.n8n.io/n8nio/n8n
+
+  n8n UI: http://localhost:5678
+
+  ⚠ Inside n8n workflows, use: http://host.docker.internal:8000
+    (not http://127.0.0.1:8000 — that won't reach your host machine)
+
+================================================================
+  OPTION B — FULL DOCKER (Production Mode)
+================================================================
+
+----------------------------------------------------------------
+STEP 1 — Navigate to the project
+----------------------------------------------------------------
+
+  cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api"
+
+----------------------------------------------------------------
+STEP 2 — Build and start all services
+----------------------------------------------------------------
+
+  docker-compose up --build
+
+  This starts:
+    - api     → FastAPI on port 8000
+    - mlflow  → MLflow Tracking Server on port 5000
+
+  To run in background (detached mode):
+  docker-compose up --build -d
+
+----------------------------------------------------------------
+STEP 3 — Check services are running
+----------------------------------------------------------------
+
+  docker-compose ps
+
+  Expected output:
+    ml_api_api_1      ...  Up   0.0.0.0:8000->8000/tcp
+    ml_api_mlflow_1   ...  Up   0.0.0.0:5000->5000/tcp
+
+----------------------------------------------------------------
+STEP 4 — Train models inside the container
+----------------------------------------------------------------
+
+  docker-compose exec api python training/train_actor1.py
+  docker-compose exec api python training/train_actor2.py
+  docker-compose exec api python training/train_actor3.py
+
+----------------------------------------------------------------
+STEP 5 — View logs
+----------------------------------------------------------------
+
+  docker-compose logs -f api
+  docker-compose logs -f mlflow
+
+----------------------------------------------------------------
+STEP 6 — Stop all services
+----------------------------------------------------------------
+
+  docker-compose down
+
+  To stop AND remove volumes (full reset):
+  docker-compose down -v
+
+================================================================
+  AVAILABLE API ENDPOINTS (once FastAPI is running)
+================================================================
+
+  GET  http://127.0.0.1:8000/health           → Health check
+  POST http://127.0.0.1:8000/predict          → Run a prediction
+  POST http://127.0.0.1:8000/retrain          → Trigger retraining
+  POST http://127.0.0.1:8000/save-n8n-result  → Save result from n8n
+  GET  http://127.0.0.1:8000/predictions      → List stored predictions
+  GET  http://127.0.0.1:8000/docs             → Swagger UI (interactive)
+  GET  http://127.0.0.1:5000                  → MLflow Tracking UI
+
+================================================================
+  QUICK REFERENCE — COPY-PASTE COMMANDS
+================================================================
+
+  # Navigate
+  cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api"
+
+  # Install deps
+  pip install -r requirements.txt
+
+  # Create folders (first time)
+  New-Item -ItemType Directory -Force -Path ".\mlflow\mlruns"
+  New-Item -ItemType Directory -Force -Path ".\results"
+
+  # Start MLflow (Terminal 1)
+  mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri ./mlflow/mlruns --default-artifact-root ./mlflow/mlruns
+
+  # Train actors (Terminal 2)
+  python training/train_actor1.py
+  python training/train_actor2.py
+  python training/train_actor3.py
+
+  # Start FastAPI (Terminal 3)
+  python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+  # Verify health (Terminal 4)
+  python -c "import urllib.request, json; r=urllib.request.urlopen('http://127.0.0.1:8000/health'); print(json.dumps(json.loads(r.read()), indent=2))"
+
+================================================================
+  TROUBLESHOOTING
+================================================================
+
+  Problem : 'mlflow' is not recognized
+  Solution: pip install mlflow
+
+  Problem : 'uvicorn' is not recognized
+  Solution: Use "python -m uvicorn" instead of "uvicorn"
+
+  Problem : Port 8000 already in use
+  Solution:
+    netstat -ano | findstr :8000
+    taskkill /PID <PID_NUMBER> /F
+
+  Problem : Port 5000 already in use
+  Solution:
+    netstat -ano | findstr :5000
+    taskkill /PID <PID_NUMBER> /F
+
+  Problem : ModuleNotFoundError
+  Solution: pip install -r requirements.txt
+
+  Problem : Docker "mlflow image not found"
+  Solution:
+    docker pull ghcr.io/mlflow/mlflow:latest
+
+  Problem : MLflow experiments not showing
+  Solution: Make sure training scripts were run AFTER MLflow server started
+
+================================================================
+  SERVICE URLS SUMMARY
+================================================================
+
+  FastAPI server  → http://127.0.0.1:8000
+  Swagger UI      → http://127.0.0.1:8000/docs
+  MLflow UI       → http://127.0.0.1:5000
+  n8n UI          → http://127.0.0.1:5678
+
+================================================================

@@ -1,0 +1,14 @@
+artifact_uri: file:C:/Users/sbiss/OneDrive - ESPRIT/Desktop/ml_api/mlflow/mlruns/614386804897203239/0c7899214d3f437d90e2930a3bb8b309/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '614386804897203239'
+lifecycle_stage: active
+run_id: 0c7899214d3f437d90e2930a3bb8b309
+run_name: v1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776980700942
+status: 1
+tags: []
+user_id: sbissi
