@@ -95,3 +95,4 @@ Triggered manually in n8n — runs the full pipeline:
 ## Course
 ESPRIT Engineering School — Option ERP-BI
 ML Automation System — Week S12 MLOps Phase
+ML Automation System — Week S13 Grafana + prometheus
