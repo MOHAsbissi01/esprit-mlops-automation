@@ -12,7 +12,7 @@ This project implements a **multi-actor Machine Learning automation system** int
 - **3 ML pipelines** across 3 domain actors
 
 The system is designed to be **modular, scalable, containerized, and fully automated**.
-
+- Designed for horizontal scalability and multi-actor extensibility
 ---
 
 ## Project Structure
