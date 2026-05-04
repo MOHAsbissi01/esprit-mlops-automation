@@ -1,14 +1,27 @@
-Terminal 1 — MLflow
+Update monitoring_README.md startup section with this exact terminal order:
 
-powershell =====> cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
-python -m mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri ./mlflow/mlruns --default-artifact-root ./mlflow/mlruns --workers 1
- --------------------
+Terminal 1: MLflow on port 5000
+  cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+  python -m mlflow server --host 0.0.0.0 --port 5000 
+  --backend-store-uri ./mlflow/mlruns 
+  --default-artifact-root ./mlflow/mlruns --workers 1
 
-Terminal 2 — FastAPI
-powershell     =====> cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
-python -m uvicorn main:app --host 0.0.0.0 --port 8000
- ----------------------------------
-Terminal 3 — n8n
+Terminal 2: FastAPI on port 8000
+  cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+  python -m uvicorn main:app --host 0.0.0.0 --port 8000
 
-powershelln8n start
-Wait for: Editor is now accessible via: http://localhost:5678
+Terminal 3: n8n on port 5678
+  n8n start
+
+Terminal 4: Prometheus on port 9090
+  "C:\prometheus-3.11.3.windows-amd64\prometheus-3.11.3.windows-amd64\prometheus.exe"
+  --config.file="C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2\prometheus.yml"
+
+Terminal 5: Grafana on port 3000 (Windows service or manual binary)
+
+Terminal 6: Run simulation LAST
+  python simulate_scenarios.py
+
+Add a services health-check table with all 6 URLs.
+Add PowerShell tail command to watch logs live:
+  Get-Content ml_api.log -Wait -Tail 20

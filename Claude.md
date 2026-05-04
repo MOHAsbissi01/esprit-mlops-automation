@@ -464,3 +464,137 @@ This system demonstrates a **production-grade ML automation pipeline** combining
 - ✅ MLflow UI → 3 experiments × 2 runs (v1, v2) each with full `.pkl` artifacts
 - ✅ n8n workflows imported: prediction (basic + extended) + retraining
 - ✅ `dashboard.html` — live browser calls to `/predict` with animated results
+
+---
+
+## S13 Monitoring Layer
+
+Added on 2026-05-03. All components run locally alongside the existing FastAPI stack.
+
+### Stack
+
+| Tool | Role | Port |
+|---|---|---|
+| **Prometheus 3.11.3** | Scrapes `/metrics` every 10 s, stores time-series in local TSDB | 9090 |
+| **Grafana 8.2.3+** | Visualises Prometheus data — 5-panel dashboard (traffic, latency, error rate, confidence, data health) | 3000 |
+| **`prometheus-client`** | Python library that exposes metrics at `GET /metrics` inside FastAPI | — |
+| **`scipy`** | KS-test inside `drift_detector.py` | — |
+
+### New Files Added
+
+| File | Purpose |
+|---|---|
+| `monitoring.py` | Defines all 4 Prometheus metrics; `instrument_request()` helper called on every `/predict` |
+| `drift_detector.py` | Reads `results/predictions.json`; runs confidence-drop + KS-test per actor |
+| `alerting.py` | Polls Prometheus live every 30 s; fires alerts to `ml_api.log` + n8n webhook |
+| `simulate_scenarios.py` | Sends 13 scenarios × 3 rounds across all actors to generate realistic metric traffic |
+| `prometheus.yml` | Prometheus scrape config — single target `localhost:8000`, 10 s interval |
+| `grafana_dashboard.json` | Import-ready dashboard with 5 panels; datasource variable `DS_PROMETHEUS` |
+| `monitoring_README.md` | Operator reference — startup order, Grafana setup, checklist |
+
+### Metrics Tracked
+
+| Metric | Type | Labels | Purpose |
+|---|---|---|---|
+| `ml_api_requests_total` | Counter | `actor`, `endpoint`, `status` | Total requests per actor/status |
+| `ml_api_request_duration_seconds` | Histogram | `actor`, `endpoint` | Latency distribution; buckets up to 60 s |
+| `ml_api_error_rate` | Gauge | `actor` | Rolling error ratio (0.0–1.0) |
+| `ml_api_model_confidence` | Gauge | `actor` | Last-observed model confidence score |
+
+### Per-Actor Baselines
+
+| Actor | Confidence baseline | Max latency (p95) | Max error rate |
+|---|---|---|---|
+| actor1 | 0.85 | 2.0 s | 10 % |
+| actor2 | 0.82 | 2.0 s | 10 % |
+| actor3 | 0.80 | 2.0 s | 10 % |
+
+### Alert Rules (`alerting.py`)
+
+| Rule | Metric source | Threshold | Action |
+|---|---|---|---|
+| `high_latency_p95` | `histogram_quantile(0.95, rate(...[5m]))` | > 2.0 s | Log + n8n webhook |
+| `high_error_rate` | `ml_api_error_rate` gauge | > 10 % | Log + n8n webhook |
+| `low_model_confidence` | `ml_api_model_confidence` gauge | < 0.75 | Log + n8n webhook |
+| `distribution_drift` | `drift_detector.run_drift_check()` | KS-stat > 0.3 | Log + n8n webhook |
+| `confidence_drop` | `drift_detector.run_drift_check()` | mean < baseline − 0.05 | Log + n8n webhook |
+
+Alert log format:
+```
+[ALERT] 2026-05-03T14:05:00+00:00 | rule=high_latency_p95 | actor=actor1 | value=37.49 | details=p95=37.487s > threshold=2.0s
+```
+
+### Drift Detection (`drift_detector.py`)
+
+- Reads `results/predictions.json` (228 records as of 2026-05-03: actor1=71, actor2=110, actor3=46)
+- **Confidence drop**: mean of all actor values vs. per-actor baseline — fires if `mean < baseline − 0.05`
+- **Distribution shift**: 2-sample KS test — oldest 100 records as reference, most recent 50 as test window; fires if `ks_stat > 0.3`
+- Run manually: `python drift_detector.py`
+- Run automatically: called inside every `alerting.py` cycle (no separate process needed)
+
+### Simulation Scenarios (`simulate_scenarios.py`)
+
+13 scenarios covering all 3 actors and 7 tasks, randomised and repeated for 3 rounds (39 total calls):
+
+| Actor | Tasks | Scenario count |
+|---|---|---|
+| actor1 | `co2` ×2, `energy` ×2, `cluster` ×1 | 5 |
+| actor2 | `charge` ×2, `cancellation` ×2 | 4 |
+| actor3 | `severity` ×2, `risk_cluster` ×1, `anomaly` ×1 | 4 |
+
+Run: `python simulate_scenarios.py` — generates traffic visible live in Grafana.
+
+### 6-Terminal Startup Order
+
+**Terminal 1 — MLflow**
+```powershell
+cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+python -m mlflow server --host 0.0.0.0 --port 5000 `
+  --backend-store-uri ./mlflow/mlruns `
+  --default-artifact-root ./mlflow/mlruns `
+  --workers 1
+```
+
+**Terminal 2 — FastAPI**
+```powershell
+cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+python -m uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+**Terminal 3 — n8n**
+```powershell
+n8n start
+```
+
+**Terminal 4 — Prometheus**
+```powershell
+"C:\prometheus-3.11.3.windows-amd64\prometheus-3.11.3.windows-amd64\prometheus.exe" `
+  --config.file="C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2\prometheus.yml"
+```
+
+**Terminal 5 — Grafana**
+```
+http://localhost:3000  (Windows service auto-starts; no command needed)
+```
+
+**Terminal 6 — Alerting**
+```powershell
+cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+python alerting.py
+```
+
+### Grafana Dashboard Setup (one-time)
+
+1. Open `http://localhost:3000` → login `admin` / `admin`
+2. **Configuration → Data Sources → Add → Prometheus** → URL: `http://localhost:9090` → **Save & Test**
+3. **Dashboards → Import → Upload `grafana_dashboard.json`** → set `DS_PROMETHEUS` → **Import**
+
+### S13 Deliverables Checklist
+
+- [ ] Prometheus scraping `/metrics` every 10 s (`health="up"` in `/api/v1/targets`)
+- [ ] Grafana dashboard imported — 5 panels visible with live data
+- [ ] `alerting.py` running continuously — 5 alert rules active
+- [ ] `drift_detector.py` passing for all 3 actors
+- [ ] `simulate_scenarios.py` demonstrated — 39 calls visible in Grafana
+- [ ] `ml_api.log` showing `[ALERT]` entries
+- [ ] `monitoring_README.md` present and complete

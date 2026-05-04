@@ -1,0 +1,678 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ESPRIT MLOps System — Full Documentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f1117;--card:#1a1d27;--accent:#6366f1;--a2:#818cf8;--txt:#e2e8f0;--mut:#94a3b8;--brd:#2d3148;--grn:#22c55e;--red:#ef4444;--ylw:#f59e0b;--blu:#3b82f6}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);display:flex;min-height:100vh}
+a{color:var(--a2);text-decoration:none}
+/* SIDEBAR */
+#sidebar{width:240px;min-width:240px;background:#12141f;border-right:1px solid var(--brd);position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:100;display:flex;flex-direction:column}
+#sidebar .logo{padding:20px 16px 12px;border-bottom:1px solid var(--brd)}
+#sidebar .logo h2{font-size:.85rem;font-weight:700;color:var(--accent);letter-spacing:.08em;text-transform:uppercase}
+#sidebar .logo p{font-size:.7rem;color:var(--mut);margin-top:2px}
+#sidebar nav{flex:1;padding:8px 0}
+#sidebar nav a{display:flex;align-items:center;gap:10px;padding:9px 16px;font-size:.8rem;font-weight:500;color:var(--mut);border-left:3px solid transparent;transition:.15s}
+#sidebar nav a:hover,#sidebar nav a.active{color:var(--txt);border-left-color:var(--accent);background:rgba(99,102,241,.08)}
+#sidebar nav a .num{font-size:.65rem;background:var(--brd);border-radius:4px;padding:1px 5px;font-weight:600}
+/* MAIN */
+#main{margin-left:240px;flex:1;max-width:100%}
+/* HEADER */
+header{background:linear-gradient(135deg,#12141f 0%,#1a1d27 100%);border-bottom:1px solid var(--brd);padding:32px 40px 28px}
+header h1{font-size:1.6rem;font-weight:700;background:linear-gradient(135deg,#fff,var(--a2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+header p{color:var(--mut);font-size:.85rem;margin-top:6px}
+.badges{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.badge{padding:4px 10px;border-radius:20px;font-size:.7rem;font-weight:600;display:flex;align-items:center;gap:4px}
+.badge.live{background:rgba(34,197,94,.15);color:var(--grn);border:1px solid rgba(34,197,94,.3)}
+.badge.info{background:rgba(99,102,241,.15);color:var(--a2);border:1px solid rgba(99,102,241,.3)}
+.badge.warn{background:rgba(245,158,11,.15);color:var(--ylw);border:1px solid rgba(245,158,11,.3)}
+/* SECTIONS */
+section{padding:40px}
+section+section{border-top:1px solid var(--brd)}
+.sec-title{font-size:1.25rem;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.sec-sub{color:var(--mut);font-size:.85rem;margin-bottom:24px}
+/* CARDS GRID */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px}
+.card{background:var(--card);border:1px solid var(--brd);border-radius:12px;padding:20px;transition:.2s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card h3{font-size:.95rem;font-weight:600;margin-bottom:4px}
+.card .tag{display:inline-block;font-size:.65rem;padding:2px 8px;border-radius:10px;margin-bottom:10px;font-weight:600}
+.actor1 .tag{background:rgba(34,197,94,.15);color:var(--grn)}
+.actor2 .tag{background:rgba(99,102,241,.15);color:var(--a2)}
+.actor3 .tag{background:rgba(239,68,68,.15);color:var(--red)}
+.card ul{list-style:none;font-size:.78rem;color:var(--mut);line-height:1.8}
+.card ul li::before{content:"→ ";color:var(--accent)}
+/* TECH STACK */
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.stk{background:var(--card);border:1px solid var(--brd);padding:5px 12px;border-radius:8px;font-size:.72rem;font-weight:600;color:var(--a2)}
+/* ARCH DIAGRAM */
+.diagram{background:var(--card);border:1px solid var(--brd);border-radius:12px;padding:28px;overflow-x:auto}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.node{background:#12141f;border:1px solid var(--accent);border-radius:8px;padding:8px 14px;font-size:.75rem;font-weight:600;white-space:nowrap}
+.node.dim{border-color:var(--brd);color:var(--mut)}
+.arr{color:var(--accent);font-size:1rem;font-weight:700}
+.arr.down{display:block;text-align:center;margin:4px 0;font-size:1.2rem}
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-size:.8rem;margin:16px 0}
+th{background:#12141f;padding:10px 14px;text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);border-bottom:2px solid var(--brd)}
+td{padding:10px 14px;border-bottom:1px solid var(--brd);vertical-align:middle}
+tr:hover td{background:rgba(99,102,241,.04)}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.dot.up{background:var(--grn);box-shadow:0 0 6px var(--grn)}
+.dot.na{background:var(--mut)}
+/* TERMINAL BLOCKS */
+.term-block{background:#0a0c14;border:1px solid var(--brd);border-radius:10px;margin-bottom:16px;overflow:hidden}
+.term-head{display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:#12141f;border-bottom:1px solid var(--brd)}
+.term-head .tnum{background:var(--accent);color:#fff;border-radius:5px;padding:2px 8px;font-size:.7rem;font-weight:700;margin-right:8px}
+.term-head span{font-size:.78rem;font-weight:600}
+.copy-btn{background:transparent;border:1px solid var(--brd);color:var(--mut);padding:3px 10px;border-radius:5px;font-size:.68rem;cursor:pointer;transition:.15s;font-family:inherit}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+pre{padding:16px;font-size:.78rem;line-height:1.7;overflow-x:auto;color:#a5f3fc;font-family:'Courier New',monospace}
+/* METHOD BADGES */
+.get{background:rgba(34,197,94,.15);color:var(--grn);border:1px solid rgba(34,197,94,.3);padding:2px 8px;border-radius:5px;font-size:.68rem;font-weight:700}
+.post{background:rgba(59,130,246,.15);color:var(--blu);border:1px solid rgba(59,130,246,.3);padding:2px 8px;border-radius:5px;font-size:.68rem;font-weight:700}
+/* WORKFLOW CARDS */
+.wf-card{background:var(--card);border:1px solid var(--brd);border-radius:10px;padding:18px;margin-bottom:12px}
+.wf-card h4{font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--a2)}
+.wf-card p{font-size:.78rem;color:var(--mut);line-height:1.6}
+.trigger{display:inline-block;background:rgba(245,158,11,.12);color:var(--ylw);border:1px solid rgba(245,158,11,.3);padding:2px 8px;border-radius:5px;font-size:.68rem;font-weight:600;margin-bottom:8px}
+/* METRIC CARDS */
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:24px}
+.metric-card{background:var(--card);border:1px solid var(--brd);border-radius:10px;padding:18px}
+.metric-card .icon{font-size:1.4rem;margin-bottom:8px}
+.metric-card h4{font-size:.78rem;font-weight:600;color:var(--a2);margin-bottom:4px}
+.metric-card p{font-size:.72rem;color:var(--mut);line-height:1.5}
+.metric-card .mtype{font-size:.65rem;background:rgba(99,102,241,.12);color:var(--a2);border-radius:4px;padding:1px 6px;display:inline-block;margin-bottom:6px}
+/* ALERT RULES */
+.alert-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.alert-list li{background:var(--card);border:1px solid var(--brd);border-radius:8px;padding:12px 16px;font-size:.8rem;display:flex;align-items:center;gap:12px}
+.alert-list li::before{content:"⚠";font-size:.9rem}
+.alert-list li strong{color:var(--txt);display:block;margin-bottom:2px}
+.alert-list li span{color:var(--mut);font-size:.73rem}
+/* STEPS */
+.steps{counter-reset:step;display:flex;flex-direction:column;gap:12px}
+.step{display:flex;gap:14px;align-items:flex-start}
+.step-num{counter-increment:step;content:counter(step);min-width:28px;height:28px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;flex-shrink:0}
+.step-num::before{content:counter(step)}
+.step p{font-size:.8rem;color:var(--mut);padding-top:5px;line-height:1.6}
+/* SCENARIO CARDS */
+.sc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:16px 0}
+.sc-card{background:var(--card);border:1px solid var(--brd);border-radius:10px;padding:16px}
+.sc-card h4{font-size:.82rem;font-weight:600;margin-bottom:6px}
+.sc-card p{font-size:.74rem;color:var(--mut);line-height:1.5}
+/* FILE TREE */
+.tree-group{margin-bottom:12px}
+.tree-header{display:flex;align-items:center;gap:8px;cursor:pointer;padding:8px 12px;background:var(--card);border:1px solid var(--brd);border-radius:8px;font-size:.8rem;font-weight:600;user-select:none}
+.tree-header:hover{border-color:var(--accent)}
+.tree-header .chevron{margin-left:auto;transition:.2s;color:var(--mut)}
+.tree-header.open .chevron{transform:rotate(90deg)}
+.tree-body{display:none;padding:4px 0 4px 16px}
+.tree-body.open{display:block}
+.tree-file{display:flex;align-items:center;gap:8px;padding:5px 12px;font-size:.75rem;color:var(--mut);border-left:2px solid var(--brd)}
+.tree-file:hover{color:var(--txt);border-left-color:var(--accent)}
+.tree-file .fn{color:var(--txt);font-weight:500;min-width:200px}
+.new-badge{background:rgba(34,197,94,.15);color:var(--grn);border:1px solid rgba(34,197,94,.3);border-radius:4px;font-size:.6rem;font-weight:700;padding:1px 5px}
+/* HAMBURGER */
+#ham{display:none;position:fixed;top:12px;left:12px;z-index:200;background:var(--card);border:1px solid var(--brd);border-radius:8px;padding:8px;cursor:pointer;flex-direction:column;gap:4px}
+#ham span{display:block;width:20px;height:2px;background:var(--txt);border-radius:2px}
+/* CODE HIGHLIGHT (CSS only) */
+.code-block{background:#0a0c14;border:1px solid var(--brd);border-radius:8px;overflow:hidden;margin:10px 0}
+.code-block pre{color:#e2e8f0}
+/* FOOTER */
+footer{background:#12141f;border-top:1px solid var(--brd);padding:20px 40px;font-size:.75rem;color:var(--mut);display:flex;align-items:center;justify-content:space-between;flex-wrap:gap}
+footer .ftags{display:flex;gap:8px}
+footer .ftag{background:var(--brd);padding:3px 10px;border-radius:10px;font-size:.68rem}
+/* RESPONSIVE */
+@media(max-width:768px){
+  #sidebar{transform:translateX(-100%);transition:.25s}
+  #sidebar.open{transform:translateX(0)}
+  #main{margin-left:0}
+  #ham{display:flex}
+  section{padding:24px 16px}
+  header{padding:24px 16px 20px}
+}
+</style></head><body>
+<div id="ham" onclick="toggleSidebar()"><span></span><span></span><span></span></div>
+<nav id="sidebar">
+  <div class="logo"><h2>ESPRIT MLOps</h2><p>S12 + S13 Documentation</p></div>
+  <nav>
+    <a href="#overview" class="active"><span class="num">01</span> Overview</a>
+    <a href="#architecture"><span class="num">02</span> Architecture</a>
+    <a href="#startup"><span class="num">03</span> Startup Guide</a>
+    <a href="#api"><span class="num">04</span> API Reference</a>
+    <a href="#mlops"><span class="num">05</span> MLOps &amp; n8n</a>
+    <a href="#monitoring"><span class="num">06</span> Monitoring S13</a>
+    <a href="#filetree"><span class="num">07</span> File Tree</a>
+  </nav>
+</nav>
+<div id="main">
+<header>
+  <h1>ESPRIT MLOps System — Full Documentation</h1>
+  <p>S12 + S13 | ERP-BI Option | Multi-Actor ML Automation</p>
+  <div class="badges">
+    <span class="badge live">● API Live :8000</span>
+    <span class="badge info">● Prometheus :9090</span>
+    <span class="badge warn">● Grafana :3000</span>
+  </div>
+</header>
+<!-- SECTION 1: OVERVIEW -->
+<section id="overview">
+<div class="sec-title">🎯 Overview</div>
+<p class="sec-sub">Multi-actor ML automation system — 3 domain experts, 8 ML models, full MLOps pipeline</p>
+<div class="cards">
+  <div class="card actor1">
+    <span class="tag">ECOLOGICAL</span>
+    <h3>Actor 1 — Écologique</h3>
+    <ul>
+      <li>XGBoost CO₂ regression</li>
+      <li>XGBoost Energy regression</li>
+      <li>K-Means pollution clustering</li>
+      <li>Prophet AQI forecast</li>
+    </ul>
+    <ul style="margin-top:8px">
+      <li>Task: co2</li><li>Task: energy</li><li>Task: cluster</li>
+    </ul>
+  </div>
+  <div class="card actor2">
+    <span class="tag">MOBILITY</span>
+    <h3>Actor 2 — Mobilités</h3>
+    <ul>
+      <li>XGBoost passenger load</li>
+      <li>XGBoost cancellation risk</li>
+      <li>Prophet congestion (10 zones)</li>
+    </ul>
+    <ul style="margin-top:8px">
+      <li>Task: charge</li><li>Task: cancellation</li>
+    </ul>
+  </div>
+  <div class="card actor3">
+    <span class="tag">SECURITY</span>
+    <h3>Actor 3 — Sécurité</h3>
+    <ul>
+      <li>Random Forest severity</li>
+      <li>K-Means risk clustering</li>
+      <li>Isolation Forest anomaly</li>
+    </ul>
+    <ul style="margin-top:8px">
+      <li>Task: severity</li><li>Task: risk_cluster</li><li>Task: anomaly</li>
+    </ul>
+  </div>
+</div>
+<div class="sec-title" style="font-size:1rem;margin-bottom:10px">Tech Stack</div>
+<div class="stack">
+  <span class="stk">⚡ FastAPI :8000</span><span class="stk">🧪 MLflow :5000</span>
+  <span class="stk">🔄 n8n :5678</span><span class="stk">🐳 Docker</span>
+  <span class="stk">📊 Prometheus :9090</span><span class="stk">📈 Grafana :3000</span>
+  <span class="stk">📉 PowerBI</span><span class="stk">🤖 Gemini AI</span>
+  <span class="stk">🐍 Python 3.13</span><span class="stk">🌐 XGBoost · RF · KMeans · IF</span>
+</div>
+</section>
+
+<!-- SECTION 2: ARCHITECTURE -->
+<section id="architecture">
+<div class="sec-title">🏗️ Architecture</div>
+<p class="sec-sub">Full system data flow from client to alerting</p>
+<div class="diagram">
+  <div class="flow">
+    <div class="node">Postman / n8n</div><div class="arr">→</div>
+    <div class="node">FastAPI :8000</div><div class="arr">→</div>
+    <div class="node">Actor 1/2/3</div><div class="arr">→</div>
+    <div class="node">MLflow :5000</div>
+  </div>
+  <div style="margin-left:164px">
+    <span class="arr down">↓</span>
+    <div class="flow"><div class="node dim">predictions.json (228 records)</div></div>
+    <span class="arr down">↓</span>
+    <div class="flow">
+      <div class="node">Prometheus :9090</div><div class="arr">→</div>
+      <div class="node">Grafana :3000</div>
+    </div>
+    <span class="arr down">↓</span>
+    <div class="flow">
+      <div class="node">alerting.py</div><div class="arr">→</div>
+      <div class="node">n8n webhook</div><div class="arr">→</div>
+      <div class="node dim">Telegram / Gmail</div>
+    </div>
+  </div>
+</div>
+<table style="margin-top:20px">
+  <thead><tr><th>Service</th><th>Port</th><th>URL</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>FastAPI</td><td>8000</td><td><a href="http://localhost:8000" target="_blank">localhost:8000</a></td><td><span class="dot up"></span> Up</td></tr>
+    <tr><td>MLflow</td><td>5000</td><td><a href="http://localhost:5000" target="_blank">localhost:5000</a></td><td><span class="dot up"></span> Up</td></tr>
+    <tr><td>n8n</td><td>5678</td><td><a href="http://localhost:5678" target="_blank">localhost:5678</a></td><td><span class="dot na"></span> Manual</td></tr>
+    <tr><td>Prometheus</td><td>9090</td><td><a href="http://localhost:9090" target="_blank">localhost:9090</a></td><td><span class="dot up"></span> Up</td></tr>
+    <tr><td>Grafana</td><td>3000</td><td><a href="http://localhost:3000" target="_blank">localhost:3000</a></td><td><span class="dot na"></span> Service</td></tr>
+    <tr><td>Swagger UI</td><td>8000</td><td><a href="http://localhost:8000/docs" target="_blank">localhost:8000/docs</a></td><td><span class="dot up"></span> Up</td></tr>
+  </tbody>
+</table>
+</section>
+<!-- SECTION 3: STARTUP GUIDE -->
+<section id="startup">
+<div class="sec-title">🚀 Startup Guide</div>
+<p class="sec-sub">Start all 6 services in this exact order — each in a separate PowerShell terminal</p>
+
+<div class="term-block">
+  <div class="term-head"><span><span class="tnum">T1</span>MLflow Tracking Server</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+python -m mlflow server --host 0.0.0.0 --port 5000 `
+  --backend-store-uri ./mlflow/mlruns `
+  --default-artifact-root ./mlflow/mlruns --workers 1</pre>
+</div>
+
+<div class="term-block">
+  <div class="term-head"><span><span class="tnum">T2</span>FastAPI Server</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+python -m uvicorn main:app --host 0.0.0.0 --port 8000</pre>
+</div>
+
+<div class="term-block">
+  <div class="term-head"><span><span class="tnum">T3</span>n8n Workflow Engine</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>n8n start</pre>
+</div>
+
+<div class="term-block">
+  <div class="term-head"><span><span class="tnum">T4</span>Prometheus</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>"C:\prometheus-3.11.3.windows-amd64\prometheus-3.11.3.windows-amd64\prometheus.exe" `
+  --config.file="C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2\prometheus.yml"</pre>
+</div>
+
+<div class="term-block">
+  <div class="term-head"><span><span class="tnum">T5</span>Grafana</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre># Windows service — check http://localhost:3000 (admin / admin)
+# If not running as service, start manually from Grafana bin/ folder</pre>
+</div>
+
+<div class="term-block">
+  <div class="term-head"><span><span class="tnum">T6</span>Alerting Engine (continuous 30s loop)</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+python alerting.py</pre>
+</div>
+
+<div class="term-block" style="margin-top:24px">
+  <div class="term-head"><span>📋 Watch Logs Live</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>Get-Content "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2\ml_api.log" -Wait -Tail 20</pre>
+</div>
+
+<table style="margin-top:24px">
+  <thead><tr><th>Service</th><th>Health Check URL</th><th>Expected Response</th></tr></thead>
+  <tbody>
+    <tr><td>FastAPI</td><td><a href="http://localhost:8000/health" target="_blank">localhost:8000/health</a></td><td>{"status":"ok","version":"2.0.0"}</td></tr>
+    <tr><td>MLflow</td><td><a href="http://localhost:5000/health" target="_blank">localhost:5000/health</a></td><td>HTTP 200 OK</td></tr>
+    <tr><td>n8n</td><td><a href="http://localhost:5678" target="_blank">localhost:5678</a></td><td>n8n login page</td></tr>
+    <tr><td>Prometheus</td><td><a href="http://localhost:9090/api/v1/targets" target="_blank">localhost:9090/api/v1/targets</a></td><td>{"status":"success","data":{"activeTargets":[...]}}</td></tr>
+    <tr><td>Grafana</td><td><a href="http://localhost:3000" target="_blank">localhost:3000</a></td><td>Grafana login page</td></tr>
+    <tr><td>Metrics</td><td><a href="http://localhost:8000/metrics" target="_blank">localhost:8000/metrics</a></td><td>ml_api_requests_total ... (text/plain)</td></tr>
+  </tbody>
+</table>
+</section>
+<!-- SECTION 4: API REFERENCE -->
+<section id="api">
+<div class="sec-title">📡 API Reference</div>
+<p class="sec-sub">All endpoints exposed by the FastAPI server at localhost:8000</p>
+<table>
+  <thead><tr><th>Method</th><th>Path</th><th>Description</th><th>Auth</th></tr></thead>
+  <tbody>
+    <tr><td><span class="get">GET</span></td><td>/health</td><td>Liveness probe — actor registry + prediction count</td><td>None</td></tr>
+    <tr><td><span class="post">POST</span></td><td>/predict</td><td>Unified ML inference — dynamic actor + task dispatch</td><td>None</td></tr>
+    <tr><td><span class="post">POST</span></td><td>/retrain</td><td>Trigger sequential retraining of all 3 actor pipelines</td><td>None</td></tr>
+    <tr><td><span class="post">POST</span></td><td>/save-n8n-result</td><td>Persist a prediction record forwarded by n8n</td><td>None</td></tr>
+    <tr><td><span class="get">GET</span></td><td>/predictions</td><td>Browse stored predictions (query: limit, actor)</td><td>None</td></tr>
+    <tr><td><span class="get">GET</span></td><td>/metrics</td><td>Prometheus scrape endpoint — text/plain exposition</td><td>None</td></tr>
+    <tr><td><span class="get">GET</span></td><td>/docs</td><td>Swagger UI — interactive API documentation</td><td>None</td></tr>
+  </tbody>
+</table>
+
+<div class="sec-title" style="font-size:.95rem;margin:24px 0 12px">POST /predict — Example Bodies</div>
+
+<p style="font-size:.78rem;color:var(--mut);margin-bottom:8px">Actor 1 — CO₂ Prediction</p>
+<div class="term-block">
+  <div class="term-head"><span>actor1 / co2</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>{
+  "actor": "actor1",
+  "task": "co2",
+  "features": {
+    "nb_voyageurs": 120,
+    "distance_km": 45.5,
+    "type_transport": 1,
+    "heure": 8,
+    "jour_semaine": 2
+  }
+}</pre>
+</div>
+
+<p style="font-size:.78rem;color:var(--mut);margin-bottom:8px">Actor 2 — Cancellation Risk</p>
+<div class="term-block">
+  <div class="term-head"><span>actor2 / cancellation</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>{
+  "actor": "actor2",
+  "task": "cancellation",
+  "features": {
+    "heure": 14,
+    "delay_minutes": 1000,
+    "temperature": 1.0
+  }
+}</pre>
+</div>
+
+<p style="font-size:.78rem;color:var(--mut);margin-bottom:8px">Actor 3 — Severity Classification</p>
+<div class="term-block">
+  <div class="term-head"><span>actor3 / severity</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>{
+  "actor": "actor3",
+  "task": "severity",
+  "features": {
+    "nb_accidents": 5,
+    "nb_victimes": 12,
+    "heure": 23,
+    "zone_type": 2,
+    "meteo": 1
+  }
+}</pre>
+</div>
+
+<div class="sec-title" style="font-size:.95rem;margin:20px 0 10px">Response Format</div>
+<div class="term-block">
+  <div class="term-head"><span>Unified Response (all actors)</span></div>
+  <pre>{
+  "status": "success",
+  "actor": "actor2",
+  "task": "cancellation",
+  "result": {
+    "cancellation_probability": 0.0021,
+    "prediction": 0,
+    "risk_level": "LOW",
+    "threshold_used": 0.047
+  },
+  "latency_ms": 107.165,
+  "timestamp": "2026-05-03T14:04:07+00:00"
+}</pre>
+</div>
+
+<table style="margin-top:16px">
+  <thead><tr><th>HTTP Code</th><th>Meaning</th></tr></thead>
+  <tbody>
+    <tr><td>200</td><td>Prediction success</td></tr>
+    <tr><td>422</td><td>Invalid actor, task, or missing features</td></tr>
+    <tr><td>503</td><td>Model .pkl not found — run retraining first</td></tr>
+    <tr><td>500</td><td>Unexpected pipeline failure</td></tr>
+  </tbody>
+</table>
+</section>
+<!-- SECTION 5: MLOPS & N8N -->
+<section id="mlops">
+<div class="sec-title">🔄 MLOps &amp; n8n</div>
+<p class="sec-sub">Workflow automation, experiment tracking, and model lifecycle management</p>
+
+<div class="wf-card">
+  <span class="trigger">Webhook POST /webhook/ml-predict</span>
+  <h4>n8n_prediction_workflow.json — Basic Prediction</h4>
+  <p>Receives prediction request via webhook → forwards to FastAPI /predict → saves result via /save-n8n-result → responds with structured JSON. Timeout: 30 000 ms.</p>
+</div>
+<div class="wf-card">
+  <span class="trigger">Webhook POST /webhook/ml-predict</span>
+  <h4>n8n_prediction_workflow_extended.json — Extended with Alerts</h4>
+  <p>Full enrichment pipeline: adds risk_label + summary → routes by actor → sends Telegram/Gmail alerts on HIGH_RISK → logs to Google Sheets → optionally triggers /retrain on anomaly. Integrations: Telegram, Gmail, Google Sheets.</p>
+</div>
+<div class="wf-card">
+  <span class="trigger">Cron — Every Sunday 02:00</span>
+  <h4>n8n_retraining_workflow.json — Scheduled Retraining</h4>
+  <p>Health-checks FastAPI → calls POST /retrain (timeout 600 000 ms) → checks all_success → sends status notification. Runs all 3 actor pipelines sequentially.</p>
+</div>
+<div class="wf-card">
+  <span class="trigger">Manual / Webhook trigger</span>
+  <h4>n8n_mlops_activation_workflow.json — MLOps Activation</h4>
+  <p>Full MLOps lifecycle: health check → activate monitoring → trigger retraining → validate results → send Gmail summary report with Gemini AI-generated analysis. Uses Gmail OAuth credential.</p>
+</div>
+
+<div class="sec-title" style="font-size:.95rem;margin:24px 0 12px">MLflow Experiments</div>
+<table>
+  <thead><tr><th>Actor</th><th>Experiment Name</th><th>Experiment ID</th><th>Runs</th><th>.pkl Artifacts</th></tr></thead>
+  <tbody>
+    <tr><td>actor1</td><td>actor1_ecologique</td><td>864163389833378263</td><td>v1, v2</td><td>11</td></tr>
+    <tr><td>actor2</td><td>actor2_mobilites</td><td>691914286126122040</td><td>v1, v2</td><td>5</td></tr>
+    <tr><td>actor3</td><td>actor3_securite</td><td>614386804897203239</td><td>v1, v2</td><td>8</td></tr>
+  </tbody>
+</table>
+
+<div class="card" style="margin-top:16px;border-color:rgba(99,102,241,.4)">
+  <h3 style="margin-bottom:8px">🤖 Gemini + Gmail Integration</h3>
+  <p style="font-size:.78rem;color:var(--mut);line-height:1.7">The MLOps activation workflow uses Gemini AI to generate a natural-language analysis of the retraining results, formatted as an HTML email and sent via Gmail OAuth. Credential IDs must be configured in n8n: <code style="background:var(--bg);padding:1px 5px;border-radius:3px">YOUR_GMAIL_CREDENTIAL_ID</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px">YOUR_TELEGRAM_CREDENTIAL_ID</code>.</p>
+</div>
+
+<div class="sec-title" style="font-size:.95rem;margin:20px 0 10px">Train Commands</div>
+<div class="term-block">
+  <div class="term-head"><span>Run MLflow training for all actors</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+python training/train_actor1.py --run v2
+python training/train_actor2.py --run v2
+python training/train_actor3.py --run v2</pre>
+</div>
+</section>
+
+<!-- SECTION 6: MONITORING -->
+<section id="monitoring">
+<div class="sec-title">📊 Monitoring — S13</div>
+<p class="sec-sub">Prometheus + Grafana + alerting.py + drift_detector.py</p>
+
+<div class="metric-grid">
+  <div class="metric-card">
+    <div class="icon">📈</div>
+    <span class="mtype">Counter</span>
+    <h4>ml_api_requests_total</h4>
+    <p>Total prediction requests. Labels: actor, endpoint, status. Used to compute traffic rate per actor.</p>
+  </div>
+  <div class="metric-card">
+    <div class="icon">⏱️</div>
+    <span class="mtype">Histogram</span>
+    <h4>ml_api_request_duration_seconds</h4>
+    <p>Request latency. Buckets: 0.05–60s. p95 computed by Prometheus. Labels: actor, endpoint.</p>
+  </div>
+  <div class="metric-card">
+    <div class="icon">🚨</div>
+    <span class="mtype">Gauge</span>
+    <h4>ml_api_error_rate</h4>
+    <p>Rolling error ratio (0.0–1.0) per actor. Updated on every request. Alert threshold: &gt; 10%.</p>
+  </div>
+  <div class="metric-card">
+    <div class="icon">🎯</div>
+    <span class="mtype">Gauge</span>
+    <h4>ml_api_model_confidence</h4>
+    <p>Last-observed model confidence per actor. Alert threshold: &lt; 0.75. Extracted from result dict.</p>
+  </div>
+</div>
+
+<div class="sec-title" style="font-size:.95rem;margin-bottom:12px">Baseline Values</div>
+<table>
+  <thead><tr><th>Actor</th><th>Confidence Baseline</th><th>Max Latency p95</th><th>Max Error Rate</th></tr></thead>
+  <tbody>
+    <tr><td>actor1</td><td>0.85 (static, co2 task)</td><td>2.0 s</td><td>10%</td></tr>
+    <tr><td>actor2</td><td>0.82 → dynamic (cancellation_probability)</td><td>2.0 s</td><td>10%</td></tr>
+    <tr><td>actor3</td><td>0.80 → dynamic (max predict_proba)</td><td>2.0 s</td><td>10%</td></tr>
+  </tbody>
+</table>
+
+<div class="sec-title" style="font-size:.95rem;margin:20px 0 12px">Alert Rules</div>
+<ul class="alert-list">
+  <li><div><strong>high_latency_p95</strong><span>Prometheus histogram_quantile(0.95) &gt; 2.0 s → fires for actor1 cold-start (~37s first call)</span></div></li>
+  <li><div><strong>high_error_rate</strong><span>ml_api_error_rate gauge &gt; 0.10 → rolling ratio of failed requests per actor</span></div></li>
+  <li><div><strong>low_model_confidence</strong><span>ml_api_model_confidence &lt; 0.75 → extracted from result dict key (confidence / cancellation_probability / max proba)</span></div></li>
+  <li><div><strong>distribution_drift</strong><span>KS-test stat &gt; 0.3 on recent 50 vs historical 100 predictions per actor</span></div></li>
+  <li><div><strong>confidence_drop</strong><span>Mean prediction value &lt; actor baseline − 0.05 (actor1=0.85, actor2=0.82, actor3=0.80)</span></div></li>
+</ul>
+
+<div class="sec-title" style="font-size:.95rem;margin:20px 0 12px">Grafana Dashboard Import</div>
+<div class="steps">
+  <div class="step"><div class="step-num"></div><p>Open <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> → login <strong>admin / admin</strong></p></div>
+  <div class="step"><div class="step-num"></div><p><strong>Configuration → Data Sources → Add data source → Prometheus</strong><br>URL: <code style="background:var(--bg);padding:1px 5px;border-radius:3px">http://localhost:9090</code> → click <strong>Save &amp; Test</strong> — expect green "Data source is working"</p></div>
+  <div class="step"><div class="step-num"></div><p><strong>Dashboards → Import → Upload grafana_dashboard.json</strong><br>Set <code style="background:var(--bg);padding:1px 5px;border-radius:3px">DS_PROMETHEUS</code> to the data source above → click <strong>Import</strong><br>Dashboard: <em>ML API Monitoring — S13</em> · 5 panels · 10s auto-refresh · UID ml-api-s13</p></div>
+</div>
+
+<div class="sec-title" style="font-size:.95rem;margin:20px 0 12px">Simulation Scenarios</div>
+<div class="sc-grid">
+  <div class="sc-card" style="border-color:rgba(99,102,241,.4)">
+    <h4>🚦 Traffic Spike</h4>
+    <p>13 scenarios × 3 rounds = 39 rapid requests across all actors. Populates traffic rate panels in Grafana. Run: <code>python simulate_scenarios.py</code></p>
+  </div>
+  <div class="sc-card" style="border-color:rgba(239,68,68,.4)">
+    <h4>💥 Error Injection</h4>
+    <p>Send requests with invalid task names or missing features to trigger HTTP 422 errors. Raises ml_api_error_rate gauge above threshold.</p>
+  </div>
+  <div class="sc-card" style="border-color:rgba(245,158,11,.4)">
+    <h4>📉 Drift Detection</h4>
+    <p>After 60+ predictions accumulate in predictions.json, run <code>python drift_detector.py</code> — KS-test compares newest 50 vs oldest 100 records per actor.</p>
+  </div>
+</div>
+
+<div class="sec-title" style="font-size:.95rem;margin:20px 0 10px">Drift Detection Detail</div>
+<div class="card" style="margin-bottom:16px">
+  <p style="font-size:.78rem;color:var(--mut);line-height:1.8">
+    <strong style="color:var(--txt)">KS-Test:</strong> 2-sample Kolmogorov-Smirnov test compares the distribution of the most recent 50 predictions against the oldest 100 (baseline). Fires if <code>ks_stat &gt; 0.3</code>.<br>
+    <strong style="color:var(--txt)">Confidence Drop:</strong> Mean of all numeric prediction values compared to per-actor baseline. Fires if <code>mean &lt; baseline − 0.05</code>.<br>
+    <strong style="color:var(--txt)">Data:</strong> 228 records as of 2026-05-03 — actor1: 71, actor2: 110, actor3: 46. Actor3 approaching minimum threshold for reliable KS-test (needs ≥60).
+  </p>
+</div>
+
+<div class="term-block">
+  <div class="term-head"><span>Run alerting.py continuously</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
+python alerting.py
+# Runs one full check immediately, then loops every 30s
+# Fires to: ml_api.log + http://localhost:5678/webhook/alert</pre>
+</div>
+<div class="term-block">
+  <div class="term-head"><span>Watch live alerts in log</span><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+  <pre>Get-Content "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2\ml_api.log" -Wait -Tail 20
+# Alert lines start with:
+# [ALERT] 2026-05-03T14:05:00+00:00 | rule=high_latency_p95 | actor=actor1 | value=37.49</pre>
+</div>
+</section>
+<!-- SECTION 7: FILE TREE -->
+<section id="filetree">
+<div class="sec-title">📁 File Tree</div>
+<p class="sec-sub">Complete project structure — click categories to expand/collapse</p>
+
+<div class="tree-group">
+  <div class="tree-header open" onclick="toggleTree(this)">⚙️ Core Files <span class="chevron">▶</span></div>
+  <div class="tree-body open">
+    <div class="tree-file"><span class="fn">main.py</span><span>FastAPI application — all endpoints, actor dispatch, middleware</span></div>
+    <div class="tree-file"><span class="fn">requirements.txt</span><span>Python dependencies — fastapi, uvicorn, xgboost, mlflow, prometheus-client, scipy</span></div>
+    <div class="tree-file"><span class="fn">Dockerfile</span><span>Container definition — python:3.11-slim, exposes port 8000</span></div>
+    <div class="tree-file"><span class="fn">docker-compose.yml</span><span>Orchestrates api + mlflow services</span></div>
+    <div class="tree-file"><span class="fn">ml_api.log</span><span>Runtime + alert log — structured JSON requests + [ALERT] lines</span></div>
+  </div>
+</div>
+
+<div class="tree-group">
+  <div class="tree-header open" onclick="toggleTree(this)">🤖 Actors <span class="chevron">▶</span></div>
+  <div class="tree-body open">
+    <div class="tree-file"><span class="fn">actors/actor1.py</span><span>Ecological: co2 (XGBoost), energy (XGBoost), cluster (K-Means) — returns dict with confidence</span></div>
+    <div class="tree-file"><span class="fn">actors/actor2.py</span><span>Mobility: charge (XGBoost), cancellation (XGBoost) — returns cancellation_probability</span></div>
+    <div class="tree-file"><span class="fn">actors/actor3.py</span><span>Security: severity (RF + predict_proba), risk_cluster (K-Means), anomaly (Isolation Forest)</span></div>
+  </div>
+</div>
+
+<div class="tree-group">
+  <div class="tree-header" onclick="toggleTree(this)">🧪 Training <span class="chevron">▶</span></div>
+  <div class="tree-body">
+    <div class="tree-file"><span class="fn">training/train_actor1.py</span><span>MLflow-tracked training — logs params, metrics, .pkl artifacts for actor1</span></div>
+    <div class="tree-file"><span class="fn">training/train_actor2.py</span><span>MLflow-tracked training — logs params, metrics, .pkl artifacts for actor2</span></div>
+    <div class="tree-file"><span class="fn">training/train_actor3.py</span><span>MLflow-tracked training — logs params, metrics, .pkl artifacts for actor3</span></div>
+  </div>
+</div>
+
+<div class="tree-group">
+  <div class="tree-header open" onclick="toggleTree(this)">📊 Monitoring — S13 <span class="chevron">▶</span></div>
+  <div class="tree-body open">
+    <div class="tree-file"><span class="fn">monitoring.py</span> <span class="new-badge">NEW</span><span>4 Prometheus metrics + instrument_request() + get_metrics_response()</span></div>
+    <div class="tree-file"><span class="fn">drift_detector.py</span> <span class="new-badge">NEW</span><span>KS-test + confidence-drop detection — reads predictions.json per actor</span></div>
+    <div class="tree-file"><span class="fn">alerting.py</span> <span class="new-badge">NEW</span><span>30s alert loop — Prometheus poll + drift check + n8n webhook POST</span></div>
+    <div class="tree-file"><span class="fn">simulate_scenarios.py</span> <span class="new-badge">NEW</span><span>13 scenarios × 3 rounds — traffic generator for all 3 actors / 7 tasks</span></div>
+    <div class="tree-file"><span class="fn">prometheus.yml</span> <span class="new-badge">NEW</span><span>Scrape config — target localhost:8000/metrics every 10s, job: ml_api</span></div>
+    <div class="tree-file"><span class="fn">grafana_dashboard.json</span> <span class="new-badge">NEW</span><span>5-panel dashboard — traffic, latency p95, error rate, confidence, data health</span></div>
+    <div class="tree-file"><span class="fn">monitoring_README.md</span> <span class="new-badge">NEW</span><span>Operator reference — startup, Grafana setup, S13 checklist</span></div>
+  </div>
+</div>
+
+<div class="tree-group">
+  <div class="tree-header" onclick="toggleTree(this)">🔄 n8n Workflows <span class="chevron">▶</span></div>
+  <div class="tree-body">
+    <div class="tree-file"><span class="fn">n8n_prediction_workflow.json</span><span>Basic prediction — webhook → FastAPI → save result</span></div>
+    <div class="tree-file"><span class="fn">n8n_prediction_workflow_extended.json</span><span>Extended — enrichment + Telegram/Gmail/Sheets + auto-retrain on anomaly</span></div>
+    <div class="tree-file"><span class="fn">n8n_retraining_workflow.json</span><span>Scheduled retraining — Cron Sunday 02:00 → /retrain → notification</span></div>
+    <div class="tree-file"><span class="fn">n8n_mlops_activation_workflow.json</span><span>Full MLOps lifecycle — health → retrain → Gemini analysis → Gmail report</span></div>
+  </div>
+</div>
+
+<div class="tree-group">
+  <div class="tree-header" onclick="toggleTree(this)">📝 Docs <span class="chevron">▶</span></div>
+  <div class="tree-body">
+    <div class="tree-file"><span class="fn">README.md</span><span>Quick start, endpoints, actor/task reference, S13 monitoring guide</span></div>
+    <div class="tree-file"><span class="fn">Claude.md</span><span>Extended architecture — Docker, MLflow, n8n details + S13 monitoring layer</span></div>
+    <div class="tree-file"><span class="fn">HOW_TO_START_SERVER.txt</span><span>Step-by-step FastAPI startup guide with troubleshooting</span></div>
+    <div class="tree-file"><span class="fn">MLOPS_ACTIVATION_COMMANDS.txt</span><span>Full MLOps activation — local + Docker options, all commands</span></div>
+    <div class="tree-file"><span class="fn">docs.html</span> <span class="new-badge">NEW</span><span>This file — full interactive documentation</span></div>
+  </div>
+</div>
+
+<div class="tree-group">
+  <div class="tree-header" onclick="toggleTree(this)">💾 Results &amp; Data <span class="chevron">▶</span></div>
+  <div class="tree-body">
+    <div class="tree-file"><span class="fn">results/predictions.json</span><span>228 stored predictions — actor1:71, actor2:110, actor3:46, junk:1</span></div>
+    <div class="tree-file"><span class="fn">mlflow/mlruns/</span><span>Persistent MLflow storage — 3 experiments × 2 runs each, 24 total .pkl artifacts</span></div>
+    <div class="tree-file"><span class="fn">ml_api.log</span><span>643 KB runtime log — structured JSON requests + [ALERT] monitoring lines</span></div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>ESPRIT Engineering School — Option ERP-BI &nbsp;·&nbsp; Multi-Actor ML Automation System</div>
+  <div class="ftags">
+    <span class="ftag">Week S12</span>
+    <span class="ftag">Week S13</span>
+    <span class="ftag">v2.0.0</span>
+  </div>
+</footer>
+</div><!-- #main -->
+
+<script>
+// Scroll spy
+const secs=document.querySelectorAll('section[id]');
+const links=document.querySelectorAll('#sidebar nav a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id});
+  links.forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur)});
+},{passive:true});
+
+// Smooth scroll
+links.forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  const t=document.querySelector(a.getAttribute('href'));
+  if(t)t.scrollIntoView({behavior:'smooth'});
+  if(window.innerWidth<768)document.getElementById('sidebar').classList.remove('open');
+}));
+
+// Copy buttons
+function cp(btn){
+  const pre=btn.closest('.term-block').querySelector('pre');
+  navigator.clipboard.writeText(pre.innerText).then(()=>{
+    const old=btn.textContent;btn.textContent='Copied!';
+    setTimeout(()=>btn.textContent=old,1800);
+  });
+}
+
+// Tree toggle
+function toggleTree(el){
+  el.classList.toggle('open');
+  const body=el.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+// Mobile sidebar
+function toggleSidebar(){
+  document.getElementById('sidebar').classList.toggle('open');
+}
+</script>
+</body></html>

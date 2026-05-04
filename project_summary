@@ -1,0 +1,97 @@
+# Project Summary History
+
+## Latest Commit Details
+**Commit ID:** `e9f2f8f086df46da90d724f44b40dfbd` *(Snapshot)*
+**Author:** User
+**Date:** May 1, 2026
+**Message:** Update project structure, added MLOps workflows, MLflow integration, and PowerBI setup.
+
+---
+
+## 📖 Project Overview
+
+This project implements a **multi-actor Machine Learning automation system** integrating:
+- **FastAPI** for model serving and providing a centralized REST API endpoint (`/predict`).
+- **MLflow** for experiment tracking, metric tracking, and artifact storage.
+- **Docker + Docker Compose** for a containerized and reproducible deployment environment.
+- **n8n** for advanced workflow orchestration (automated prediction webhook triggers, extended workflows with Telegram/Gmail/Sheets alerts, and scheduled weekly retraining).
+- **Frontend Dashboard** (`dashboard.html`) for live browser-based prediction visualizations.
+- **PowerBI** (`powerbi_last_with_ML_alert.pbix`) for advanced dashboarding with ML alerts.
+
+---
+
+## 🏗️ Architecture & Tech Stack
+
+The architecture is built to be highly modular, supporting 3 specific "Actors" handling distinct pipelines:
+
+*   **FastAPI Backend**: Hosts a unified `/predict` endpoint that dynamically routes requests to the relevant actor. Implements lazy-loading with in-memory caching to optimize `.pkl` model inference.
+*   **MLflow**: Persists training runs, tracks hyperparameter combinations, and automatically versions XGBoost, Random Forest, Isolation Forest, and K-Means `.pkl` models.
+*   **n8n Automation**: Fully automates the ML lifecycle. Listens to Webhooks to trigger predictions, routes results to external logging (Google Sheets), triggers alerts via Telegram/Gmail on anomalies or high risk, and runs Cron jobs (Sundays at 02:00) to automatically trigger `/retrain`.
+*   **Data Storage**: Thread-safe append-only `predictions.json` is used to persist all executed predictions.
+
+---
+
+## 🎯 Actor Responsibilities
+
+The system serves 3 core actors, each with specialized models:
+
+### 1. Actor 1 — Ecological (`actor1_ecologique`)
+*   **Models:** XGBoost Regression, K-Means, Prophet
+*   **Tasks:** CO₂ Emission Prediction, Energy Consumption Prediction, Pollution Zone Clustering, AQI Time-series Forecasting.
+
+### 2. Actor 2 — Mobility (`actor2_mobilites`)
+*   **Models:** XGBoost Regression, XGBoost Classification, Prophet
+*   **Tasks:** Passenger Load Prediction (Charge), Transport Cancellation Risk Classification, Congestion Forecasting.
+
+### 3. Actor 3 — Security (`actor3_securite`)
+*   **Models:** Random Forest, K-Means, Isolation Forest
+*   **Tasks:** Accident Severity Classification, Zone Risk Clustering, Outlier/Anomaly Detection.
+
+---
+
+## 🤖 n8n Automation Workflows
+
+*   **`n8n_prediction_workflow.json`**: Basic prediction workflow. Triggers via webhook, requests `/predict` from FastAPI, and saves the successful result.
+*   **`n8n_prediction_workflow_extended.json`**: Enriched workflow that adds human-readable summaries, evaluates `risk_label`, and routes alerts to Telegram, Gmail, and logs to Google Sheets. Triggers auto-retraining if an anomaly is detected.
+*   **`n8n_retraining_workflow.json`**: Scheduled Cron job that hits the `/health` endpoint to ensure the API is up, and triggers the massive `/retrain` endpoint to retrain all Actor models weekly.
+
+---
+
+## 📁 Detailed Path Tree
+
+```text
+ml_api_2/
+├── actors/                                 # Actor-specific processing modules and model loading logic
+│   ├── __init__.py
+│   ├── actor1.py                           # Ecological Director logic
+│   ├── actor2.py                           # Mobility Director logic
+│   └── actor3.py                           # Security Manager logic
+├── mlflow/                                 # MLflow tracking data (volume-mounted)
+│   └── mlruns/                             # Persistent run storage
+├── results/                                
+│   └── predictions.json                    # Thread-safe persistent prediction store
+├── training/                               # MLflow-tracked Model training scripts
+│   ├── __init__.py
+│   ├── train_actor1.py                     # Training script for Ecological models
+│   ├── train_actor2.py                     # Training script for Mobility models
+│   └── train_actor3.py                     # Training script for Security models
+├── utils/                                  
+│   ├── __init__.py
+│   └── loader.py                           # Shared thread-safe .pkl loader with cache
+├── main.py                                 # FastAPI application entry point
+├── Dockerfile                              # Container definition (python:3.11-slim)
+├── docker-compose.yml                      # Orchestrates api + mlflow services
+├── requirements.txt                        # Python dependencies
+├── dashboard.html                          # Live browser frontend to test `/predict`
+├── n8n_mlops_activation_workflow.json      # MLOps workflows configurations
+├── n8n_prediction_workflow.json            # Basic webhook to prediction
+├── n8n_prediction_workflow_extended.json   # Extended alerts (Telegram, Gmail, Sheets)
+├── n8n_retraining_workflow.json            # Scheduled weekly retraining
+├── powerbi_last_with_ML_alert.pbix         # PowerBI Dashboard integrating ML outputs
+├── HOW_TO_START_SERVER.txt                 # Detailed startup instructions
+├── MLOPS_ACTIVATION_COMMANDS.txt           # Useful n8n/MLOps CLI activation commands
+├── README.md                               # FastAPI and n8n documentation
+├── Claude.md                               # ML automation architecture documentation
+├── ml_api.log                              # Running API Logs
+└── z.txt                                   # Scratch/notes
+```

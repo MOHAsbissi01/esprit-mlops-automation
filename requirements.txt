@@ -6,3 +6,4 @@ numpy
 pandas
 mlflow
 prophet
+prometheus-client

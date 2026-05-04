@@ -34,6 +34,9 @@ from pydantic import BaseModel, Field, field_validator
 # ── Import actor modules ───────────────────────────────────────────────────────
 from actors import actor1, actor2, actor3
 
+# ── Prometheus monitoring ──────────────────────────────────────────────────────
+from monitoring import instrument_request, get_metrics_response
+
 # ── Paths ──────────────────────────────────────────────────────────────────────
 BASE_DIR = Path(__file__).parent
 RESULTS_DIR = BASE_DIR / "results"
@@ -208,6 +211,14 @@ async def global_exception_handler(request: Request, exc: Exception):
 
 
 # ── Endpoints ──────────────────────────────────────────────────────────────────
+@app.get("/metrics", tags=["System"], include_in_schema=False)
+async def metrics():
+    """Prometheus scrape endpoint — returns metrics in text/plain exposition format."""
+    body, content_type = get_metrics_response()
+    from fastapi.responses import Response
+    return Response(content=body, media_type=content_type)
+
+
 @app.get("/health", tags=["System"])
 async def health():
     """Liveness probe — returns actor registry and stored prediction count."""
@@ -310,14 +321,18 @@ async def predict(body: PredictRequest):
         actor_module = actor_meta["module"]
         result = actor_module.predict(body.task, {"features": body.features})
     except ValueError as exc:
-        latency_ms = round((time.perf_counter() - t_start) * 1000, 3)
+        elapsed = time.perf_counter() - t_start
+        instrument_request(actor=body.actor, endpoint="/predict", duration=elapsed, success=False)
+        latency_ms = round(elapsed * 1000, 3)
         logger.error(f'"ValueError — actor={body.actor} task={body.task} error={exc}"')
         raise HTTPException(
             status_code=422,
             detail={"error": "validation_error", "detail": str(exc)},
         )
     except FileNotFoundError as exc:
-        latency_ms = round((time.perf_counter() - t_start) * 1000, 3)
+        elapsed = time.perf_counter() - t_start
+        instrument_request(actor=body.actor, endpoint="/predict", duration=elapsed, success=False)
+        latency_ms = round(elapsed * 1000, 3)
         logger.error(f'"Model file not found — actor={body.actor} task={body.task} error={exc}"')
         raise HTTPException(
             status_code=503,
@@ -328,7 +343,9 @@ async def predict(body: PredictRequest):
             },
         )
     except Exception as exc:
-        latency_ms = round((time.perf_counter() - t_start) * 1000, 3)
+        elapsed = time.perf_counter() - t_start
+        instrument_request(actor=body.actor, endpoint="/predict", duration=elapsed, success=False)
+        latency_ms = round(elapsed * 1000, 3)
         logger.error(
             f'"Unexpected error — actor={body.actor} task={body.task} '
             f'error_type={type(exc).__name__} error={exc}"'
@@ -339,8 +356,18 @@ async def predict(body: PredictRequest):
         )
 
     # ── 3. Record and return ───────────────────────────────────────────────────
-    latency_ms = round((time.perf_counter() - t_start) * 1000, 3)
+    elapsed = time.perf_counter() - t_start
+    latency_ms = round(elapsed * 1000, 3)
     timestamp = datetime.now(timezone.utc).isoformat()
+
+    instrument_request(
+        actor=body.actor,
+        endpoint="/predict",
+        duration=elapsed,
+        success=True,
+        confidence=None,
+        raw_result=result,
+    )
 
     record = {
         "timestamp": timestamp,

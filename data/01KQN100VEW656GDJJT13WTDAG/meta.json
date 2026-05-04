@@ -1,0 +1,18 @@
+{
+	"ulid": "01KQN100VEW656GDJJT13WTDAG",
+	"minTime": 1777737601199,
+	"maxTime": 1777744800000,
+	"stats": {
+		"numSamples": 38042,
+		"numFloatSamples": 38042,
+		"numSeries": 59,
+		"numChunks": 324
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01KQN100VEW656GDJJT13WTDAG"
+		]
+	},
+	"version": 1
+}
