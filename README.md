@@ -454,61 +454,19 @@ Prometheus scrapes this automatically every 10 s via `prometheus.yml`.
 
 | Metric | Type | Description |
 |---|---|---|
-| `ml_api_requests_total` | Counter | Total requests — labelled by `actor`, `endpoint`, `status` |
-| `ml_api_request_duration_seconds` | Histogram | Request latency in seconds — buckets up to 60 s |
-| `ml_api_error_rate` | Gauge | Rolling error ratio per actor (0.0–1.0) |
-| `ml_api_model_confidence` | Gauge | Last-observed model confidence score per actor |
+| actor1_ecologique | v1, v2 | 11 .pkl files |
+| actor2_mobilites | v1, v2 | 5 .pkl files |
+| actor3_securite | v1, v2 | 8 .pkl files |
 
-### Grafana Dashboard Setup (one-time)
+## Verified Working
+- Docker build successful
+- /health → status ok, all 3 actors registered
+- /predict → result returned (actor1 co2: 2.2667 kg)
+- MLflow UI → 3 experiments x 2 runs with full artifacts
+- n8n workflows → prediction + retraining + MLops activation
+- Gmail → success email with Gemini AI summary
+- dashboard.html → live browser predictions
 
-1. Open `http://localhost:3000` → login `admin` / `admin`
-2. **Configuration → Data Sources → Add → Prometheus** → URL: `http://localhost:9090` → **Save & Test**
-3. **Dashboards → Import → Upload `grafana_dashboard.json`** → set `DS_PROMETHEUS` → **Import**
-
-Dashboard title: **ML API Monitoring — S13** · 5 panels · auto-refresh 10 s · UID `ml-api-s13`
-
-### Run Alerting
-
-```powershell
-cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
-python alerting.py
-# Runs one check immediately, then loops every 30 s
-# Alerts written to ml_api.log
-# Violations POSTed to http://localhost:5678/webhook/alert
-```
-
-Alert rules: `high_latency_p95` (>2 s) · `high_error_rate` (>10%) · `low_model_confidence` (<0.75) · `distribution_drift` · `confidence_drop`
-
-### Run Simulation
-
-```powershell
-cd "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2"
-python simulate_scenarios.py
-# 13 scenarios × 3 rounds = 39 requests across all 3 actors and 7 tasks
-# Watch Grafana live at http://localhost:3000
-```
-
-### Watch Logs Live (PowerShell)
-
-```powershell
-Get-Content "C:\Users\sbiss\OneDrive - ESPRIT\Desktop\ml_api_2\ml_api.log" -Wait -Tail 20
-```
-
-Alert lines start with `[ALERT]`:
-```
-[ALERT] 2026-05-03T14:05:00+00:00 | rule=high_latency_p95 | actor=actor1 | value=37.49 | details=p95=37.487s > threshold=2.0s
-```
-
-### S13 Deliverables Checklist
-
-- [ ] Prometheus scraping `/metrics` every 10 s (`health="up"` in `/api/v1/targets`)
-- [ ] Grafana dashboard imported — 5 panels visible with live data
-- [ ] `alerting.py` running continuously — 5 alert rules active
-- [ ] `drift_detector.py` passing for all 3 actors
-- [ ] `simulate_scenarios.py` demonstrated — 39 calls visible in Grafana
-- [ ] `ml_api.log` showing `[ALERT]` entries and structured request logs
-- [ ] `monitoring_README.md` present and complete
-
----
-
-*Generated for ESPRIT University — ML Automation Project (Parts 1 + S13)*
+## Course
+ESPRIT Engineering School — Option ERP-BI
+ML Automation System — Week S12 MLOps Phase
