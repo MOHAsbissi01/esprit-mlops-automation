@@ -1,0 +1,5398 @@
+[
+  {
+    "timestamp": "string",
+    "actor": "string",
+    "task": "string",
+    "result": "string",
+    "latency_ms": 0.0,
+    "source": "n8n-workflow"
+  },
+  {
+    "timestamp": "2026-04-17T19:56:59.953267+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 5
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2131.412,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-17T19:56:59.953267+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2131.412,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-17T20:03:57.479162+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 5
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.236,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-17T20:03:57.479162+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.236,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-17T21:10:30.577047+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 5
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 23.983,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-17T21:10:30.577047+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 23.983,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-18T19:37:45.085874+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 9307.683,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-18T19:37:45.085874+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 9307.683,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-18T19:54:46.969122+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.908,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-18T19:54:46.969122+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.908,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-18T20:49:39.033307+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 5.918,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-18T20:50:47.886058+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.547,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:19:44.920462+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 28245.489,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:19:44.920462+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 28245.489,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:25:03.508179+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 5.627,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:25:03.508179+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 5.627,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:31:19.868735+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 6.825,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:31:19.868735+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 6.825,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:34:56.244994+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.348,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:34:56.244994+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.348,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:37:18.673150+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 12,
+      "temperature": 17
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.912,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:37:18.673150+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.912,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:38:26.947401+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 2,
+      "temperature": 55
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.47,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:38:26.947401+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.47,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:39:26.620977+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 2,
+      "temperature": 55
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.056,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:39:26.620977+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.056,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:41:12.948695+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.771,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:41:12.948695+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.771,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T20:43:07.192394+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 5.402,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T20:43:07.192394+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 5.402,
+    "source": "n8n-extended-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T21:06:39.144412+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 33.769,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T21:06:39.144412+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 33.769,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T21:08:56.969610+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 7.25,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T21:08:56.969610+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 7.25,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T21:10:22.697776+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 6.074,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T21:10:22.697776+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 6.074,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T21:15:28.324141+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.213,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T21:15:28.324141+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.213,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-19T21:16:49.395616+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.346,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-19T21:16:49.395616+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.346,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-20T07:07:04.887443+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 13166.653,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-20T07:07:04.887443+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "result": 3.0619583129882812,
+    "latency_ms": 13166.653,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-20T08:08:33.132490+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 35.683,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-20T08:08:33.132490+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "result": 3.0619583129882812,
+    "latency_ms": 35.683,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-23T22:20:22.738379+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "mode_co2_mean": 45.3,
+      "annee": 2023,
+      "mois_sin": 0.5,
+      "mois_cos": 0.866,
+      "pm25": 18.4,
+      "no2": 32.1,
+      "aqi_index": 75.0,
+      "co2_lag1": 42.0,
+      "co2_lag3": 39.5,
+      "energie_lag1": 120.0,
+      "energie_lag3": 115.0,
+      "aqi_lag1": 72.0,
+      "pm25_lag1": 17.8,
+      "co2_roll3": 40.8,
+      "energie_roll3": 117.5,
+      "pm25_roll3": 18.0
+    },
+    "result": 2.266724109649658,
+    "latency_ms": 3157.866,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-24T08:11:02.666622+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "mode_co2_mean": 45.3,
+      "annee": 2023,
+      "mois_sin": 0.5,
+      "mois_cos": 0.866,
+      "pm25": 18.4,
+      "no2": 32.1,
+      "aqi_index": 75,
+      "co2_lag1": 42,
+      "co2_lag3": 39.5,
+      "energie_lag1": 120,
+      "energie_lag3": 115,
+      "aqi_lag1": 72,
+      "pm25_lag1": 17.8,
+      "co2_roll3": 40.8,
+      "energie_roll3": 117.5,
+      "pm25_roll3": 18
+    },
+    "result": 2.266724109649658,
+    "latency_ms": 32436.462,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-24T08:11:45.436525+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "zone_encoded": 3,
+      "line_encoded": 2,
+      "mode_encoded": 1,
+      "hour": 8,
+      "rush_hour": 1,
+      "is_weekend": 0,
+      "congestion_index": 0.65,
+      "vitesse_kmh": 22.5,
+      "temps_trajet_min": 18
+    },
+    "result": 42.824241638183594,
+    "latency_ms": 52.844,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-27T07:46:19.217365+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 24570.25,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-27T07:46:19.217365+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "result": 3.0619583129882812,
+    "latency_ms": 24570.25,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-04-27T08:27:51.882939+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 31.154,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-04-27T08:27:51.882939+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "result": 3.0619583129882812,
+    "latency_ms": 31.154,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-05-02T15:36:21.116259+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 22,
+      "delay_minutes": 45,
+      "temperature": -2.0,
+      "jour_semaine": 6,
+      "mois": 1,
+      "ligne_encoded": 3,
+      "zone_encoded": 3,
+      "mode_encoded": 0,
+      "congestion_index": 0.95
+    },
+    "result": {
+      "cancellation_probability": 0.0005,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 504.765,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:36:26.745635+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "mode_co2_mean": 45.3,
+      "annee": 2024,
+      "mois_sin": 0.5,
+      "mois_cos": 0.866,
+      "pm25": 18.4,
+      "no2": 32.1,
+      "aqi_index": 75.0,
+      "co2_lag1": 42.0,
+      "co2_lag3": 39.5,
+      "energie_lag1": 120.0,
+      "energie_lag3": 115.0,
+      "aqi_lag1": 72.0,
+      "pm25_lag1": 17.8,
+      "co2_roll3": 40.8,
+      "energie_roll3": 117.5,
+      "pm25_roll3": 18.0
+    },
+    "result": 2.266724109649658,
+    "latency_ms": 44.611,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:36:32.306597+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "zone_encoded": 1,
+      "mode_encoded": 2,
+      "mode_co2_mean": 38.0,
+      "annee": 2024,
+      "mois_sin": 0.866,
+      "mois_cos": 0.5,
+      "pm25": 15.0,
+      "no2": 28.0,
+      "aqi_index": 65.0,
+      "co2_lag1": 38.0,
+      "co2_lag3": 36.0,
+      "energie_lag1": 110.0,
+      "energie_lag3": 108.0,
+      "aqi_lag1": 63.0,
+      "pm25_lag1": 14.5,
+      "co2_roll3": 37.0,
+      "energie_roll3": 109.0,
+      "pm25_roll3": 14.8
+    },
+    "result": 4.126314640045166,
+    "latency_ms": 28.078,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:36:34.941539+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 10.0,
+      "jour_semaine": 2,
+      "mois": 4,
+      "ligne_encoded": 0,
+      "zone_encoded": 0,
+      "mode_encoded": 2,
+      "congestion_index": 0.4
+    },
+    "result": {
+      "cancellation_probability": 0.0007,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.206,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:36:40.489210+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0,
+      "jour_semaine": 1,
+      "mois": 3,
+      "ligne_encoded": 2,
+      "zone_encoded": 1,
+      "mode_encoded": 0,
+      "congestion_index": 0.6
+    },
+    "result": 42.800262451171875,
+    "latency_ms": 61.487,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:36:43.182602+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0,
+      "jour_semaine": 4,
+      "mois": 6,
+      "ligne_encoded": 1,
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "congestion_index": 0.85
+    },
+    "result": 41.858280181884766,
+    "latency_ms": 2.869,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:36:45.968891+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 22,
+      "delay_minutes": 45,
+      "temperature": -2.0,
+      "jour_semaine": 6,
+      "mois": 1,
+      "ligne_encoded": 3,
+      "zone_encoded": 3,
+      "mode_encoded": 0,
+      "congestion_index": 0.95
+    },
+    "result": {
+      "cancellation_probability": 0.0005,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.835,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:36:48.680720+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 10.0,
+      "jour_semaine": 2,
+      "mois": 4,
+      "ligne_encoded": 0,
+      "zone_encoded": 0,
+      "mode_encoded": 2,
+      "congestion_index": 0.4
+    },
+    "result": {
+      "cancellation_probability": 0.0007,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.289,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:36:51.433272+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "zone_encoded": 1,
+      "mode_encoded": 2,
+      "mode_co2_mean": 38.0,
+      "annee": 2024,
+      "mois_sin": 0.866,
+      "mois_cos": 0.5,
+      "pm25": 15.0,
+      "no2": 28.0,
+      "aqi_index": 65.0,
+      "co2_lag1": 38.0,
+      "co2_lag3": 36.0,
+      "energie_lag1": 110.0,
+      "energie_lag3": 108.0,
+      "aqi_lag1": 63.0,
+      "pm25_lag1": 14.5,
+      "co2_roll3": 37.0,
+      "energie_roll3": 109.0,
+      "pm25_roll3": 14.8
+    },
+    "result": 4.126314640045166,
+    "latency_ms": 1.228,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:36:54.245953+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0,
+      "jour_semaine": 1,
+      "mois": 3,
+      "ligne_encoded": 2,
+      "zone_encoded": 1,
+      "mode_encoded": 0,
+      "congestion_index": 0.6
+    },
+    "result": 42.800262451171875,
+    "latency_ms": 1.439,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:36:56.911607+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0,
+      "jour_semaine": 4,
+      "mois": 6,
+      "ligne_encoded": 1,
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "congestion_index": 0.85
+    },
+    "result": 41.858280181884766,
+    "latency_ms": 2.409,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:37:07.741901+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "mode_co2_mean": 45.3,
+      "annee": 2024,
+      "mois_sin": 0.5,
+      "mois_cos": 0.866,
+      "pm25": 18.4,
+      "no2": 32.1,
+      "aqi_index": 75.0,
+      "co2_lag1": 42.0,
+      "co2_lag3": 39.5,
+      "energie_lag1": 120.0,
+      "energie_lag3": 115.0,
+      "aqi_lag1": 72.0,
+      "pm25_lag1": 17.8,
+      "co2_roll3": 40.8,
+      "energie_roll3": 117.5,
+      "pm25_roll3": 18.0
+    },
+    "result": 2.266724109649658,
+    "latency_ms": 1.466,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:37:13.248460+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 22,
+      "delay_minutes": 45,
+      "temperature": -2.0,
+      "jour_semaine": 6,
+      "mois": 1,
+      "ligne_encoded": 3,
+      "zone_encoded": 3,
+      "mode_encoded": 0,
+      "congestion_index": 0.95
+    },
+    "result": {
+      "cancellation_probability": 0.0005,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.26,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:37:16.111006+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "mode_co2_mean": 45.3,
+      "annee": 2024,
+      "mois_sin": 0.5,
+      "mois_cos": 0.866,
+      "pm25": 18.4,
+      "no2": 32.1,
+      "aqi_index": 75.0,
+      "co2_lag1": 42.0,
+      "co2_lag3": 39.5,
+      "energie_lag1": 120.0,
+      "energie_lag3": 115.0,
+      "aqi_lag1": 72.0,
+      "pm25_lag1": 17.8,
+      "co2_roll3": 40.8,
+      "energie_roll3": 117.5,
+      "pm25_roll3": 18.0
+    },
+    "result": 2.266724109649658,
+    "latency_ms": 1.441,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:37:21.500756+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0,
+      "jour_semaine": 4,
+      "mois": 6,
+      "ligne_encoded": 1,
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "congestion_index": 0.85
+    },
+    "result": 41.858280181884766,
+    "latency_ms": 1.903,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:37:26.725966+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "zone_encoded": 1,
+      "mode_encoded": 2,
+      "mode_co2_mean": 38.0,
+      "annee": 2024,
+      "mois_sin": 0.866,
+      "mois_cos": 0.5,
+      "pm25": 15.0,
+      "no2": 28.0,
+      "aqi_index": 65.0,
+      "co2_lag1": 38.0,
+      "co2_lag3": 36.0,
+      "energie_lag1": 110.0,
+      "energie_lag3": 108.0,
+      "aqi_lag1": 63.0,
+      "pm25_lag1": 14.5,
+      "co2_roll3": 37.0,
+      "energie_roll3": 109.0,
+      "pm25_roll3": 14.8
+    },
+    "result": 4.126314640045166,
+    "latency_ms": 1.247,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:37:29.494523+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 10.0,
+      "jour_semaine": 2,
+      "mois": 4,
+      "ligne_encoded": 0,
+      "zone_encoded": 0,
+      "mode_encoded": 2,
+      "congestion_index": 0.4
+    },
+    "result": {
+      "cancellation_probability": 0.0007,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.489,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T15:37:32.281442+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0,
+      "jour_semaine": 1,
+      "mois": 3,
+      "ligne_encoded": 2,
+      "zone_encoded": 1,
+      "mode_encoded": 0,
+      "congestion_index": 0.6
+    },
+    "result": 42.800262451171875,
+    "latency_ms": 1.52,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:08:07.482260+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "heure": 14,
+      "densite_accidents": 12,
+      "zone_encoded": 1,
+      "nb_accidents": 3,
+      "taux_infraction": 0.05,
+      "gravite_index": 1.4
+    },
+    "result": {
+      "severity_class": 1,
+      "severity_label": "MEDIUM",
+      "probabilities": {
+        "0": 0.492,
+        "1": 0.508
+      }
+    },
+    "latency_ms": 1383.518,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:24.702607+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_voyageurs": 5,
+      "distance_km": 200.0,
+      "type_transport": 3,
+      "heure": 3,
+      "jour_semaine": 6
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.648413
+    },
+    "latency_ms": 190.716,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:27.764828+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 10,
+      "distance_km": 50.0,
+      "type_transport": 3,
+      "heure": 21,
+      "jour_semaine": 0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 232.461,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:30.448597+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 150,
+      "distance_km": 20.0,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 1
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 20.849,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:33.236554+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_voyageurs": 200,
+      "distance_km": 35.0,
+      "type_transport": 2,
+      "heure": 14,
+      "jour_semaine": 3
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 161.07,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:35.944122+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_voyageurs": 400,
+      "distance_km": 70.0,
+      "type_transport": 1,
+      "heure": 23,
+      "jour_semaine": 5
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 103.813,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:38.660084+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 9.725,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:41.474089+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.5,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:44.270814+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 50,
+      "distance_km": 8.5,
+      "type_transport": 2,
+      "heure": 23,
+      "jour_semaine": 6
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 2.636,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:49.674542+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 7.555,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:52.266854+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 90,
+      "distance_km": 15.0,
+      "type_transport": 1,
+      "heure": 7,
+      "jour_semaine": 2
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.307,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:54.995016+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_voyageurs": 200,
+      "distance_km": 35.0,
+      "type_transport": 2,
+      "heure": 14,
+      "jour_semaine": 3
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 158.053,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:44:57.767715+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 90,
+      "distance_km": 15.0,
+      "type_transport": 1,
+      "heure": 7,
+      "jour_semaine": 2
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.359,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:00.471539+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.72,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:03.306688+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_voyageurs": 5,
+      "distance_km": 200.0,
+      "type_transport": 3,
+      "heure": 3,
+      "jour_semaine": 6
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.648413
+    },
+    "latency_ms": 50.912,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:06.035797+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.814,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:08.723973+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 150,
+      "distance_km": 20.0,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 1
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.19,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:11.404400+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 50,
+      "distance_km": 8.5,
+      "type_transport": 2,
+      "heure": 23,
+      "jour_semaine": 6
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 3.165,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:16.567216+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 10,
+      "distance_km": 50.0,
+      "type_transport": 3,
+      "heure": 21,
+      "jour_semaine": 0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.163,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:19.402020+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_voyageurs": 400,
+      "distance_km": 70.0,
+      "type_transport": 1,
+      "heure": 23,
+      "jour_semaine": 5
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 1.145,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:21.998409+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 3.293,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:27.450338+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 150,
+      "distance_km": 20.0,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 1
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 2.302,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:30.243161+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_voyageurs": 400,
+      "distance_km": 70.0,
+      "type_transport": 1,
+      "heure": 23,
+      "jour_semaine": 5
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 1.018,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:33.039918+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 10,
+      "distance_km": 50.0,
+      "type_transport": 3,
+      "heure": 21,
+      "jour_semaine": 0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 5.126,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:35.969213+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_voyageurs": 200,
+      "distance_km": 35.0,
+      "type_transport": 2,
+      "heure": 14,
+      "jour_semaine": 3
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 144.392,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:38.591208+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 50,
+      "distance_km": 8.5,
+      "type_transport": 2,
+      "heure": 23,
+      "jour_semaine": 6
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.239,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:41.425230+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 90,
+      "distance_km": 15.0,
+      "type_transport": 1,
+      "heure": 7,
+      "jour_semaine": 2
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.76,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:44.262366+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 2.209,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:47.079187+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.625,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:49.866636+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.821,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:45:52.655295+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_voyageurs": 5,
+      "distance_km": 200.0,
+      "type_transport": 3,
+      "heure": 3,
+      "jour_semaine": 6
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.648413
+    },
+    "latency_ms": 61.32,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:49:55.569139+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 50,
+      "distance_km": 8.5,
+      "type_transport": 2,
+      "heure": 23,
+      "jour_semaine": 6
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 2.93,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:49:58.439301+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_voyageurs": 200,
+      "distance_km": 35.0,
+      "type_transport": 2,
+      "heure": 14,
+      "jour_semaine": 3
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 133.044,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:01.125349+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 3.9,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:03.765957+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 150,
+      "distance_km": 20.0,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 1
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.831,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:06.490107+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 2.19,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:09.126331+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.935,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:11.745203+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 90,
+      "distance_km": 15.0,
+      "type_transport": 1,
+      "heure": 7,
+      "jour_semaine": 2
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.957,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:14.452972+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_voyageurs": 400,
+      "distance_km": 70.0,
+      "type_transport": 1,
+      "heure": 23,
+      "jour_semaine": 5
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 2.051,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:17.060716+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.449,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:19.933267+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 10,
+      "distance_km": 50.0,
+      "type_transport": 3,
+      "heure": 21,
+      "jour_semaine": 0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 4.475,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:22.706098+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_voyageurs": 5,
+      "distance_km": 200.0,
+      "type_transport": 3,
+      "heure": 3,
+      "jour_semaine": 6
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.648413
+    },
+    "latency_ms": 56.317,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:25.346492+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.824,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:28.206012+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 150,
+      "distance_km": 20.0,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 1
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.358,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:31.012737+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 90,
+      "distance_km": 15.0,
+      "type_transport": 1,
+      "heure": 7,
+      "jour_semaine": 2
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.44,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:33.747142+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 2.39,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:36.601103+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 2.1,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:39.364137+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 5.038,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:42.188078+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_voyageurs": 5,
+      "distance_km": 200.0,
+      "type_transport": 3,
+      "heure": 3,
+      "jour_semaine": 6
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.648413
+    },
+    "latency_ms": 58.809,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:45.098241+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_voyageurs": 200,
+      "distance_km": 35.0,
+      "type_transport": 2,
+      "heure": 14,
+      "jour_semaine": 3
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 152.453,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:47.787210+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 10,
+      "distance_km": 50.0,
+      "type_transport": 3,
+      "heure": 21,
+      "jour_semaine": 0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.123,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:50.410195+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 50,
+      "distance_km": 8.5,
+      "type_transport": 2,
+      "heure": 23,
+      "jour_semaine": 6
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.642,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:53.068139+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_voyageurs": 400,
+      "distance_km": 70.0,
+      "type_transport": 1,
+      "heure": 23,
+      "jour_semaine": 5
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 1.427,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:55.770440+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 5.516,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:50:58.432686+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.917,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:51:01.053246+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 150,
+      "distance_km": 20.0,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 1
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.655,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:51:03.773727+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 2.109,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:51:06.577170+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_voyageurs": 200,
+      "distance_km": 35.0,
+      "type_transport": 2,
+      "heure": 14,
+      "jour_semaine": 3
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 153.053,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:51:09.403189+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 13.142,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:51:12.091877+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 50,
+      "distance_km": 8.5,
+      "type_transport": 2,
+      "heure": 23,
+      "jour_semaine": 6
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 4.976,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:51:14.928858+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 10,
+      "distance_km": 50.0,
+      "type_transport": 3,
+      "heure": 21,
+      "jour_semaine": 0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.947,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:51:17.541381+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 90,
+      "distance_km": 15.0,
+      "type_transport": 1,
+      "heure": 7,
+      "jour_semaine": 2
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.733,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:51:20.208354+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_voyageurs": 400,
+      "distance_km": 70.0,
+      "type_transport": 1,
+      "heure": 23,
+      "jour_semaine": 5
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 1.577,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T18:51:22.928985+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_voyageurs": 5,
+      "distance_km": 200.0,
+      "type_transport": 3,
+      "heure": 3,
+      "jour_semaine": 6
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.648413
+    },
+    "latency_ms": 59.964,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:13:58.632959+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 3.412,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:13:58.632959+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "result": 3.0619583129882812,
+    "latency_ms": 3.412,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-05-02T19:14:15.262189+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.705,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:14:15.262189+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "result": 3.0619583129882812,
+    "latency_ms": 1.705,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-05-02T19:14:37.450564+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 236.057,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:14:37.450564+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1,
+        "1": 0
+      }
+    },
+    "latency_ms": 236.057,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-05-02T19:14:51.727161+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.201,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:14:51.727161+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.201,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-05-02T19:15:50.732531+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 150,
+      "distance_km": 20.0,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 1
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 2.812,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:15:53.578980+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 10,
+      "distance_km": 50.0,
+      "type_transport": 3,
+      "heure": 21,
+      "jour_semaine": 0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.376,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:15:56.255354+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_voyageurs": 5,
+      "distance_km": 200.0,
+      "type_transport": 3,
+      "heure": 3,
+      "jour_semaine": 6
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.648413
+    },
+    "latency_ms": 67.538,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:15:58.943142+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 3.116,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:01.757485+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_voyageurs": 400,
+      "distance_km": 70.0,
+      "type_transport": 1,
+      "heure": 23,
+      "jour_semaine": 5
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 2.178,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:04.375868+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 50,
+      "distance_km": 8.5,
+      "type_transport": 2,
+      "heure": 23,
+      "jour_semaine": 6
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 4.893,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:07.101009+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_voyageurs": 200,
+      "distance_km": 35.0,
+      "type_transport": 2,
+      "heure": 14,
+      "jour_semaine": 3
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 146.264,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:09.936096+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 90,
+      "distance_km": 15.0,
+      "type_transport": 1,
+      "heure": 7,
+      "jour_semaine": 2
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.31,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:12.681413+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 2.425,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:15.263112+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.103,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:17.907482+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 4.583,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:20.674494+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 150,
+      "distance_km": 20.0,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 1
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.426,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:23.375369+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 90,
+      "distance_km": 15.0,
+      "type_transport": 1,
+      "heure": 7,
+      "jour_semaine": 2
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.051,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:25.940977+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 10,
+      "distance_km": 50.0,
+      "type_transport": 3,
+      "heure": 21,
+      "jour_semaine": 0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.352,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:28.680395+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 50,
+      "distance_km": 8.5,
+      "type_transport": 2,
+      "heure": 23,
+      "jour_semaine": 6
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 3.8,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:31.770721+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_voyageurs": 200,
+      "distance_km": 35.0,
+      "type_transport": 2,
+      "heure": 14,
+      "jour_semaine": 3
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 215.702,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:34.363980+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.981,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:37.038089+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_voyageurs": 5,
+      "distance_km": 200.0,
+      "type_transport": 3,
+      "heure": 3,
+      "jour_semaine": 6
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.648413
+    },
+    "latency_ms": 54.366,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:39.755966+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 5.176,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:42.609605+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.714,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:45.458858+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.352,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:48.139686+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_voyageurs": 400,
+      "distance_km": 70.0,
+      "type_transport": 1,
+      "heure": 23,
+      "jour_semaine": 5
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 2.115,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:50.959113+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 3.904,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:53.707417+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 10,
+      "distance_km": 50.0,
+      "type_transport": 3,
+      "heure": 21,
+      "jour_semaine": 0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.13,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:56.558760+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_voyageurs": 5,
+      "distance_km": 200.0,
+      "type_transport": 3,
+      "heure": 3,
+      "jour_semaine": 6
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.648413
+    },
+    "latency_ms": 56.826,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:16:59.311193+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_voyageurs": 400,
+      "distance_km": 70.0,
+      "type_transport": 1,
+      "heure": 23,
+      "jour_semaine": 5
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 2.163,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:17:01.933585+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 50,
+      "distance_km": 8.5,
+      "type_transport": 2,
+      "heure": 23,
+      "jour_semaine": 6
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 2.564,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:17:04.585907+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 2.221,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:17:07.185152+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.0,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:17:10.004522+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "nb_voyageurs": 90,
+      "distance_km": 15.0,
+      "type_transport": 1,
+      "heure": 7,
+      "jour_semaine": 2
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.191,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:17:12.864541+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 2.14,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:17:15.536488+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "nb_voyageurs": 150,
+      "distance_km": 20.0,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 1
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.374,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:17:18.305316+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_voyageurs": 200,
+      "distance_km": 35.0,
+      "type_transport": 2,
+      "heure": 14,
+      "jour_semaine": 3
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 145.601,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:29:10.873132+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.443,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:29:11.339033+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 203.098,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:32:21.007195+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.705,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:32:21.007195+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.705,
+    "source": "n8n-prediction-workflow"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:03.856856+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 1,
+      "nb_victimes": 2,
+      "heure": 10,
+      "zone_type": 0,
+      "meteo": 0
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 156.416,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:06.650401+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.689,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:09.405016+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.321,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:12.199129+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 18.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.605,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:14.859286+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_accidents": 50,
+      "nb_victimes": 100,
+      "heure": 3,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.738954
+    },
+    "latency_ms": 63.179,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:17.585702+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.825,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:20.389169+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.409,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:23.294364+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 221.829,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:26.163567+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 3.295,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:28.855033+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 3.022,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:31.498100+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_accidents": 8,
+      "nb_victimes": 20,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 2.373,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:34.167833+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.852,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:36.878471+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 250,
+      "distance_km": 55.0,
+      "type_transport": 3,
+      "heure": 7,
+      "jour_semaine": 1
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 2.534,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:39.588341+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_accidents": 50,
+      "nb_victimes": 100,
+      "heure": 3,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.738954
+    },
+    "latency_ms": 62.052,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:42.484657+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 1,
+      "nb_victimes": 2,
+      "heure": 10,
+      "zone_type": 0,
+      "meteo": 0
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 192.93,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:45.219137+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.107,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:48.088327+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.765,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:50.791201+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.006,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:53.716197+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 163.679,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:56.356129+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.489,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:33:58.954930+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.33,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:01.768955+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 18.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.211,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:04.499068+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 250,
+      "distance_km": 55.0,
+      "type_transport": 3,
+      "heure": 7,
+      "jour_semaine": 1
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 2.434,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:07.105141+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_accidents": 8,
+      "nb_victimes": 20,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 1.093,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:09.919147+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 6.878,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:12.753200+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 2.973,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:15.473202+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.614,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:18.071272+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.538,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:20.946597+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 2.92,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:23.815540+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 18.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.865,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:26.613770+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_accidents": 50,
+      "nb_victimes": 100,
+      "heure": 3,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.738954
+    },
+    "latency_ms": 76.495,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:29.641566+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 1,
+      "nb_victimes": 2,
+      "heure": 10,
+      "zone_type": 0,
+      "meteo": 0
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 166.38,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:32.444198+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.312,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:35.282425+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_accidents": 8,
+      "nb_victimes": 20,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 1.43,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:38.163537+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 2.747,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:40.892181+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 250,
+      "distance_km": 55.0,
+      "type_transport": 3,
+      "heure": 7,
+      "jour_semaine": 1
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.59,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:43.664019+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 159.195,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:46.316897+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.297,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-02T19:34:49.029165+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 3.33,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T13:55:18.795894+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 37487.157,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T13:55:50.866387+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 107.165,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T13:56:27.667924+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 5026.514,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T14:04:07.047531+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 11.396,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T14:04:21.253511+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.845,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T14:04:34.852207+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 282.71,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T14:05:39.885362+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.825,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T14:07:34.568658+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 23427.714,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T14:07:53.083573+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 133.843,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T14:07:56.430886+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 3258.802,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:16:10.442731+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "mode_co2_mean": 45.3,
+      "annee": 2023,
+      "mois_sin": 0.5,
+      "mois_cos": 0.866,
+      "pm25": 18.4,
+      "no2": 32.1,
+      "aqi_index": 75,
+      "co2_lag1": 42,
+      "co2_lag3": 39.5,
+      "energie_lag1": 120,
+      "energie_lag3": 115,
+      "aqi_lag1": 72,
+      "pm25_lag1": 17.8,
+      "co2_roll3": 40.8,
+      "energie_roll3": 117.5,
+      "pm25_roll3": 18
+    },
+    "result": 2.266724109649658,
+    "latency_ms": 8.676,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:16:13.897573+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "zone_encoded": 3,
+      "line_encoded": 2,
+      "mode_encoded": 1,
+      "hour": 8,
+      "rush_hour": 1,
+      "is_weekend": 0,
+      "congestion_index": 0.65,
+      "vitesse_kmh": 22.5,
+      "temps_trajet_min": 18
+    },
+    "result": 42.824241638183594,
+    "latency_ms": 142.11,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:16:15.445914+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "zone_sk": 3,
+      "mois": 6,
+      "nb_accidents": 12,
+      "nb_graves": 2,
+      "volume_crimes": 450,
+      "taux_criminalite": 4.2,
+      "usagers_vulnerables": 5
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 0.998,
+        "1": 0.002
+      }
+    },
+    "latency_ms": 428.704,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:16:22.745675+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "mode_co2_mean": 45.3,
+      "annee": 2023,
+      "mois_sin": 0.5,
+      "mois_cos": 0.866,
+      "pm25": 18.4,
+      "no2": 32.1,
+      "aqi_index": 75,
+      "co2_lag1": 42,
+      "co2_lag3": 39.5,
+      "energie_lag1": 120,
+      "energie_lag3": 115,
+      "aqi_lag1": 72,
+      "pm25_lag1": 17.8,
+      "co2_roll3": 40.8,
+      "energie_roll3": 117.5,
+      "pm25_roll3": 18
+    },
+    "result": 2.266724109649658,
+    "latency_ms": 6.363,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:16:23.706547+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "zone_encoded": 2,
+      "mode_encoded": 1,
+      "mode_co2_mean": 45.3,
+      "annee": 2023,
+      "mois_sin": 0.5,
+      "mois_cos": 0.866,
+      "pm25": 18.4,
+      "no2": 32.1,
+      "aqi_index": 75,
+      "co2_lag1": 42,
+      "co2_lag3": 39.5,
+      "energie_lag1": 120,
+      "energie_lag3": 115,
+      "aqi_lag1": 72,
+      "pm25_lag1": 17.8,
+      "co2_roll3": 40.8,
+      "energie_roll3": 117.5,
+      "pm25_roll3": 18
+    },
+    "result": 2.266724109649658,
+    "latency_ms": 2.164,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:16:29.421306+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "zone_encoded": 3,
+      "line_encoded": 2,
+      "mode_encoded": 1,
+      "hour": 8,
+      "rush_hour": 1,
+      "is_weekend": 0,
+      "congestion_index": 0.65,
+      "vitesse_kmh": 22.5,
+      "temps_trajet_min": 18
+    },
+    "result": 42.824241638183594,
+    "latency_ms": 3.636,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:14.852599+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 18.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.872,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:17.797341+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_accidents": 50,
+      "nb_victimes": 100,
+      "heure": 3,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.738954
+    },
+    "latency_ms": 228.13,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:20.569817+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.449,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:23.406004+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 2.927,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:26.348841+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 1,
+      "nb_victimes": 2,
+      "heure": 10,
+      "zone_type": 0,
+      "meteo": 0
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 186.137,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:28.950501+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 2.159,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:31.718956+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 19.038,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:34.539422+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 182.166,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:38.065350+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_accidents": 8,
+      "nb_victimes": 20,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 884.649,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:40.847583+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 25.308,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:43.600155+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 3.268,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:46.259147+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 250,
+      "distance_km": 55.0,
+      "type_transport": 3,
+      "heure": 7,
+      "jour_semaine": 1
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.402,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:48.999903+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.444,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:51.753896+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 250,
+      "distance_km": 55.0,
+      "type_transport": 3,
+      "heure": 7,
+      "jour_semaine": 1
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.579,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:54.487134+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 6.908,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:57.254466+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 170.119,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:33:59.977726+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.427,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:02.594711+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.633,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:05.293956+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.429,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:08.000427+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_accidents": 50,
+      "nb_victimes": 100,
+      "heure": 3,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.738954
+    },
+    "latency_ms": 53.093,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:10.565664+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_accidents": 8,
+      "nb_victimes": 20,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 1.222,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:13.248896+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.208,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:15.947030+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.251,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:18.548919+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 3.088,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:21.341559+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 18.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.566,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:24.300798+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 1,
+      "nb_victimes": 2,
+      "heure": 10,
+      "zone_type": 0,
+      "meteo": 0
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 146.144,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:26.912866+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 2.44,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:29.541233+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 250,
+      "distance_km": 55.0,
+      "type_transport": 3,
+      "heure": 7,
+      "jour_semaine": 1
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.666,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:32.208709+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.572,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:34.836668+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.723,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:37.555456+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.557,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:40.255274+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.769,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:43.123355+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 1,
+      "nb_victimes": 2,
+      "heure": 10,
+      "zone_type": 0,
+      "meteo": 0
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 155.705,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:45.690850+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.147,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:48.578016+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 148.122,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:51.152327+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 18.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 3.613,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:53.811953+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.796,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:56.453826+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_accidents": 8,
+      "nb_victimes": 20,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 1.614,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:34:59.335643+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_accidents": 50,
+      "nb_victimes": 100,
+      "heure": 3,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.738954
+    },
+    "latency_ms": 52.378,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:29.027629+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.084,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:31.688664+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 250,
+      "distance_km": 55.0,
+      "type_transport": 3,
+      "heure": 7,
+      "jour_semaine": 1
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 3.512,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:34.428896+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.501,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:37.406717+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 1,
+      "nb_victimes": 2,
+      "heure": 10,
+      "zone_type": 0,
+      "meteo": 0
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 163.404,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:40.347110+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 161.519,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:43.025358+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_accidents": 8,
+      "nb_victimes": 20,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 1.36,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:45.640176+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 2.934,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:48.451413+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_accidents": 50,
+      "nb_victimes": 100,
+      "heure": 3,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.738954
+    },
+    "latency_ms": 69.239,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:51.187919+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.72,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:53.775995+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.505,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:56.583540+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.554,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:35:59.318251+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 18.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 2.432,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:02.187959+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.475,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:04.763148+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.513,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:07.409902+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_accidents": 8,
+      "nb_victimes": 20,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 1.313,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:10.280231+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 1,
+      "nb_victimes": 2,
+      "heure": 10,
+      "zone_type": 0,
+      "meteo": 0
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 146.789,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:13.109515+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 250,
+      "distance_km": 55.0,
+      "type_transport": 3,
+      "heure": 7,
+      "jour_semaine": 1
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 3.319,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:15.793961+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.537,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:18.417239+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.654,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:21.168714+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 145.488,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:23.836193+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.544,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:26.617148+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.389,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:29.494640+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.544,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:32.217948+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_accidents": 50,
+      "nb_victimes": 100,
+      "heure": 3,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.738954
+    },
+    "latency_ms": 45.674,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:35.070838+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 18.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.516,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:37.889612+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.254,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:40.568858+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 80,
+      "distance_km": 30.0,
+      "type_transport": 1,
+      "heure": 10,
+      "jour_semaine": 3
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 3.31,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:43.522837+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 5,
+      "nb_victimes": 12,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 151.53,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:46.100734+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 14,
+      "delay_minutes": 1000,
+      "temperature": 1.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.743,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:48.789885+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 8,
+      "delay_minutes": 0,
+      "temperature": 5.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.919,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:51.618470+00:00",
+    "actor": "actor1",
+    "task": "cluster",
+    "features": {
+      "pm25": 25.0,
+      "no2": 45.0,
+      "co2_kg": 320.0,
+      "energie_kwh": 130.0
+    },
+    "result": {
+      "cluster": 0
+    },
+    "latency_ms": 1.224,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:54.274431+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 300,
+      "distance_km": 12.0,
+      "type_transport": 2,
+      "heure": 17,
+      "jour_semaine": 5
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 3.252,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:57.043338+00:00",
+    "actor": "actor2",
+    "task": "charge",
+    "features": {
+      "heure": 18,
+      "delay_minutes": 12,
+      "temperature": 22.0
+    },
+    "result": 44.67567443847656,
+    "latency_ms": 1.739,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:36:59.642628+00:00",
+    "actor": "actor1",
+    "task": "co2",
+    "features": {
+      "nb_voyageurs": 120,
+      "distance_km": 45.5,
+      "type_transport": 1,
+      "heure": 8,
+      "jour_semaine": 2
+    },
+    "result": 3.0619583129882812,
+    "latency_ms": 1.589,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:37:02.307035+00:00",
+    "actor": "actor1",
+    "task": "energy",
+    "features": {
+      "nb_voyageurs": 250,
+      "distance_km": 55.0,
+      "type_transport": 3,
+      "heure": 7,
+      "jour_semaine": 1
+    },
+    "result": 4.606313705444336,
+    "latency_ms": 1.296,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:37:05.118670+00:00",
+    "actor": "actor3",
+    "task": "severity",
+    "features": {
+      "nb_accidents": 1,
+      "nb_victimes": 2,
+      "heure": 10,
+      "zone_type": 0,
+      "meteo": 0
+    },
+    "result": {
+      "severity_class": 0,
+      "severity_label": "LOW",
+      "probabilities": {
+        "0": 1.0,
+        "1": 0.0
+      }
+    },
+    "latency_ms": 147.807,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:37:07.911102+00:00",
+    "actor": "actor2",
+    "task": "cancellation",
+    "features": {
+      "heure": 7,
+      "delay_minutes": 0,
+      "temperature": 18.0
+    },
+    "result": {
+      "cancellation_probability": 0.0021,
+      "prediction": 0,
+      "risk_level": "LOW",
+      "threshold_used": 0.047
+    },
+    "latency_ms": 1.733,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:37:10.521850+00:00",
+    "actor": "actor3",
+    "task": "risk_cluster",
+    "features": {
+      "nb_accidents": 8,
+      "nb_victimes": 20,
+      "heure": 23,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "risk_cluster": 0,
+      "risk_label": "Low Risk"
+    },
+    "latency_ms": 1.125,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-05-03T15:37:13.438767+00:00",
+    "actor": "actor3",
+    "task": "anomaly",
+    "features": {
+      "nb_accidents": 50,
+      "nb_victimes": 100,
+      "heure": 3,
+      "zone_type": 2,
+      "meteo": 1
+    },
+    "result": {
+      "is_anomaly": 1,
+      "anomaly_label": "ANOMALY",
+      "anomaly_score": -0.738954
+    },
+    "latency_ms": 53.412,
+    "status": "success"
+  }
+]
